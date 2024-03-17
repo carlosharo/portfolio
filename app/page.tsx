@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <div className={styles.card}>
         <p>
-          I'm a software engineer with over seven years of experience in front-end development, specializing in React and JavaScript. I am passionate about creating innovative, functional and attractive web solutions that meet the needs of users and clients.
+          I am a software engineer with over seven years of experience in front-end development, specializing in React and JavaScript. I am passionate about creating innovative, functional and attractive web solutions that meet the needs of users and clients.
         </p>
       </div>
     </main >
