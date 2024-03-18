@@ -6,7 +6,6 @@ export default function About() {
     return (
         <div>
             <h2 className={styles.card}>Articles list</h2>
-            {/* @ts-expect-error Async Server Component */}
             <ArticlesList />
         </div>
 
