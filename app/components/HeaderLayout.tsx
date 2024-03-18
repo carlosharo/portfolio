@@ -13,13 +13,13 @@ export const HeaderLayout = () => {
                         <Link href="/about">About</Link>
                     </li>
                     <li>
-                        <Link href="/book">Book</Link>
+                        <Link href="/articles">Articles</Link>
                     </li>
                     <li>
                         <Link href="/portfolio">Portfolio</Link>
                     </li>
                     <li>
-                        <Link href="/review">Review</Link>
+                        <Link href="/settings">Settings</Link>
                     </li>
                     <li>
                         <Link href="/contact">Contact</Link>

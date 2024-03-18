@@ -15,14 +15,16 @@ export default function Home() {
             height={150} />
         </p>
       </div>
-      <div className={styles.card}>
-        <h2>Carlos Jimenez Haro </h2>
-        <p>Frontend Developer in Svitla Systems, Inc. | NextJs, React, JavaScript, GraphQL</p>
-      </div>
-      <div className={styles.card}>
-        <p>
-          I am a software engineer with over seven years of experience in front-end development, specializing in React and JavaScript. I am passionate about creating innovative, functional and attractive web solutions that meet the needs of users and clients.
-        </p>
+      <div className={styles.colum}>
+        <div className={styles.card}>
+          <h2>Carlos Jimenez Haro </h2>
+          <p>Frontend Developer in Svitla Systems, Inc. | NextJs, React, JavaScript, GraphQL</p>
+        </div>
+        <div className={styles.card}>
+          <p>
+            I am a software engineer with over seven years of experience in front-end development, specializing in React and JavaScript. I am passionate about creating innovative, functional and attractive web solutions that meet the needs of users and clients.
+          </p>
+        </div>
       </div>
     </main >
   );
