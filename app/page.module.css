@@ -3,16 +3,16 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 0 10%;
-  min-height: 60vh;
+  min-height: 70vh;
 }
 
 .header {
   display: flex;
   flex-direction: row;
-  background-color: black;
+  background-color: #000;
   color: white;
   min-height: 10vh;
   width: 100%;
@@ -23,17 +23,19 @@
 }
 
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .avatar {
   border-radius: 50%;
+  margin: 0.5rem;
 }
 
 .navbar .home,
 .social {
-  width: 300px;
+  width: 30%;
   display: flex;
 }
 
@@ -52,6 +54,7 @@
   justify-content: space-around;
   font-size: 16px;
   list-style-type: none;
+
 }
 
 .footer {
@@ -59,7 +62,7 @@
   flex-direction: row;
   background-color: gainsboro;
   color: white;
-  min-height: 30vh;
+  min-height: 20vh;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -76,5 +79,22 @@
   font-family: var(--font-mono);
 }
 
-/* Nextjs CSS */
+.colum {
+  display: flex;
+  flex-direction: column;
+}
 
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
+/* Nextjs CSS */
