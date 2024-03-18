@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <HeaderLayout />
-        <div className={styles.container}>
+        <div className={styles.body_container}>
           <main className={styles.main}>
             {children}
           </main>
