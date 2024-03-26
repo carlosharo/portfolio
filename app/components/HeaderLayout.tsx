@@ -16,7 +16,7 @@ export const HeaderLayout = () => {
                         <Link href="/articles">Articles</Link>
                     </li>
                     <li>
-                        <Link href="/portfolio">Portfolio</Link>
+                        <Link href="/review">Review</Link>
                     </li>
                     <li>
                         <Link href="/settings">Settings</Link>
