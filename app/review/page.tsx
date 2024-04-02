@@ -9,12 +9,11 @@ export default function About() {
             <div className={styles.data_container}>
                 <div className={styles.card}>
                     <h2>let declaration</h2>
-                    <p>
-                        <div className={styles.description}>
-                            {`The let statement declares a block scope local variable, optionally initializing it to a value.`}
-                        </div>
-                        <div className={styles.card}>
-                            {`{
+                    <div className={styles.description}>
+                        {`The let statement declares a block scope local variable, optionally initializing it to a value.`}
+                    </div>
+                    <div className={styles.card}>
+                        {`{
                                 let x = 1;
 
                                 if (x === 1) {
@@ -23,8 +22,7 @@ export default function About() {
                                 }
                                 console.log(x);   // expected output: 1
                             }`}
-                        </div>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -95,6 +95,19 @@
   align-items: center;
 }
 
+.countdown {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.warning {
+  background-color: chocolate;
+}
+
+.alert {
+  background-color: darkred;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .main {
