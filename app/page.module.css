@@ -96,6 +96,7 @@
 }
 
 .countdown {
+  padding: 1.5rem;
   font-size: 4rem;
   text-align: center;
 }
@@ -106,6 +107,14 @@
 
 .alert {
   background-color: darkred;
+}
+
+.startbutton {
+  width: 100%;
+  height: 35px;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /* Mobile */
