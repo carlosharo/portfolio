@@ -8,7 +8,6 @@ export const Countdown = () => {
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const { minutes: currentMinutes, seconds: currentSeconds, isRunning } = getTime(counter);
-    console.log(currentMinutes, currentSeconds, isRunning, counter);
 
     const handleStart = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
@@ -23,7 +22,7 @@ export const Countdown = () => {
         const time = parseInt(e.target.value);
         callFunction(time >= 0 ? time : 0);
     }
-
+git a
     const buttonText = isRunning ? 'STOP' : 'START';
 
     useEffect(() => {
