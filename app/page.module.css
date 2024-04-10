@@ -136,6 +136,11 @@
   text-align: center;
 }
 
+.countdown_header {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .main {

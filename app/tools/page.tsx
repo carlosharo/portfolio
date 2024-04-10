@@ -9,10 +9,7 @@ export default function About() {
             </div>
             <div className={styles.data_container}>
                 <div className={styles.card}>
-                    <h2>Counter</h2>
-                    <div className={styles.card}>
-                        <Countdown />
-                    </div>
+                    <Countdown />
                 </div>
             </div>
         </div>
