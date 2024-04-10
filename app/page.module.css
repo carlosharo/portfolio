@@ -84,6 +84,10 @@
   font-family: var(--font-mono);
 }
 
+.data_container {
+  min-width: 35rem;
+}
+
 .colum {
   display: flex;
   flex-direction: column;
@@ -115,6 +119,21 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.countdown_controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.countdow_input {
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
 }
 
 /* Mobile */
