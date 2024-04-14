@@ -3,11 +3,18 @@
  * @param time: Time in milliseconds 
  * @returns: The amount of minutes and seconds transformed from milliseconds
  */
-export const getTime = (time: number) => {
+
+interface getTimeProps {
+    minutes: number;
+    seconds: number;
+    isRunning: boolean;
+}
+
+export const getTime = (time: number): getTimeProps => {
     const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((time % (1000 * 60)) / 1000);
     const isRunning = minutes > 0 || seconds > 0;
-    
+
     return {
         minutes,
         seconds,
@@ -22,6 +29,6 @@ export const getTime = (time: number) => {
  * @returns: The minutes + seconds in the correct format 00:00
  */
 
-export const getFormat = (minutes: number, seconds: number) =>{
+export const getFormat = (minutes: number, seconds: number): string => {
     return `${minutes}`.padStart(2, '0') + ':' + `${seconds}`.padStart(2, '0');
 }

@@ -1,14 +1,14 @@
 'use client'
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import styles from "../../page.module.css";
 import { getTime, getFormat } from '../../_utils';
 import { Settings } from '../../_commons/_icons';
+import { ActionPayload, countdownReducer, CountdownType, initialState } from '../reducers'
 
-export const Countdown = () => {
-    const [counter, setCounter] = useState<number>(0);
-    const [seconds, setSeconds] = useState<number>(0);
-    const [minutes, setMinutes] = useState<number>(45);
-    const [showControls, setShowControls] = useState<boolean>(false);
+export const CountdownRedux = () => {
+
+    const [state, dispatch] = useReducer(countdownReducer, initialState);
+    const { counter, seconds, minutes, showSettings } = state;
     const { minutes: currentMinutes, seconds: currentSeconds, isRunning } = getTime(counter);
 
     const handleStart = (
@@ -16,21 +16,30 @@ export const Countdown = () => {
     ): void => {
         e.preventDefault();
         if (isRunning) {
-            setCounter(0);
+            dispatch({
+                type: CountdownType.STOP,
+                payload: {}
+            });
         } else {
-            setCounter((minutes * 60 * 1000) + (seconds * 1000));
+            dispatch({
+                type: CountdownType.START,
+                payload: { minutes, seconds },
+            })
         }
     }
 
-    const handleTime = (
-        e: { target: { value: string; }; },
-        callFunction: (arg0: number) => void
-    ): void => {
-        callFunction(parseInt(e.target.value));
+    const handleTime = (type: CountdownType, payload: ActionPayload): void => {
+        dispatch({
+            type,
+            payload,
+        });
     }
 
-    const toggleControls = (): void => {
-        setShowControls(!showControls);
+    const toggleSettings = (): void => {
+        dispatch({
+            type: CountdownType.SHOW_SETTINGS,
+            payload: {}
+        })
     }
 
     const buttonText = isRunning ? 'STOP' : 'START';
@@ -38,7 +47,10 @@ export const Countdown = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             if (isRunning) {
-                setCounter(counter - 1000)
+                dispatch({
+                    type: CountdownType.DECREASE,
+                    payload: {}
+                })
             }
         }, 1000);
         return () => clearInterval(interval);
@@ -49,7 +61,7 @@ export const Countdown = () => {
         <>
             <div className={styles.countdown_header}>
                 <h2>Counter</h2>
-                <Settings onClick={toggleControls} />
+                <Settings onClick={toggleSettings} />
             </div>
             <div className={styles.card}>
                 <div
@@ -70,7 +82,7 @@ export const Countdown = () => {
                     </button>
                 </div>
                 {
-                    showControls &&
+                    showSettings &&
                     <div className={styles.countdown_controls}>
                         <label htmlFor="minutes">Minutes</label>
                         <input
@@ -78,7 +90,8 @@ export const Countdown = () => {
                             max={59}
                             className={styles.countdow_input}
                             name="minutes" type="number"
-                            value={minutes} onChange={(e) => handleTime(e, setMinutes)}
+                            value={minutes} 
+                            onChange={(e) => handleTime(CountdownType.UPDATE_MINUTES, { minutes: parseInt(e.target.value) })}
                         >
                         </input>
                         <label htmlFor="seconds">Seconds</label>
@@ -89,7 +102,7 @@ export const Countdown = () => {
                             name="seconds"
                             type="number"
                             value={seconds}
-                            onChange={(e) => handleTime(e, setSeconds)}
+                            onChange={(e) => handleTime(CountdownType.UPDATE_SECONDS, { seconds: parseInt(e.target.value) })}
                         >
                         </input>
                     </div>

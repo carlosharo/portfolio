@@ -1,5 +1,5 @@
 import styles from "../page.module.css";
-import { Countdown } from './components/countdown';
+import { CountdownRedux } from './components/countdownRedux';
 
 export default function About() {
     return (
@@ -9,7 +9,7 @@ export default function About() {
             </div>
             <div className={styles.data_container}>
                 <div className={styles.card}>
-                    <Countdown />
+                    <CountdownRedux />
                 </div>
             </div>
         </div>
