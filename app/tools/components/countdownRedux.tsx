@@ -1,12 +1,11 @@
 'use client'
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer } from "react";
 import styles from "../../page.module.css";
 import { getTime, getFormat } from '../../_utils';
 import { Settings } from '../../_commons/_icons';
-import { ActionPayload, countdownReducer, CountdownType, initialState } from '../reducers'
+import { ActionPayload, countdownReducer, CountdownType, initialState } from '../../_reducers'
 
 export const CountdownRedux = () => {
-
     const [state, dispatch] = useReducer(countdownReducer, initialState);
     const { counter, seconds, minutes, showSettings } = state;
     const { minutes: currentMinutes, seconds: currentSeconds, isRunning } = getTime(counter);
