@@ -1,9 +1,10 @@
 'use client'
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, useCallback } from "react";
 import styles from "../../page.module.css";
 import { getTime, getFormat } from '../../_utils';
-import { Settings } from '../../_commons/_icons';
+import { SettingsIcon } from '../../_commons/_icons';
 import { ActionPayload, countdownReducer, CountdownType, initialState } from '../../_reducers'
+import { Settings } from "./settings";
 
 export const CountdownRedux = () => {
     const [state, dispatch] = useReducer(countdownReducer, initialState);
@@ -27,12 +28,13 @@ export const CountdownRedux = () => {
         }
     }
 
-    const handleTime = (type: CountdownType, payload: ActionPayload): void => {
+    const handleTime = useCallback((type: CountdownType, payload: ActionPayload): void => {
         dispatch({
             type,
             payload,
         });
-    }
+    }, [])
+
 
     const toggleSettings = (): void => {
         dispatch({
@@ -55,12 +57,11 @@ export const CountdownRedux = () => {
         return () => clearInterval(interval);
     }, [counter]);
 
-
     return (
         <>
             <div className={styles.countdown_header}>
                 <h2>Counter</h2>
-                <Settings onClick={toggleSettings} />
+                <SettingsIcon onClick={toggleSettings} />
             </div>
             <div className={styles.card}>
                 <div
@@ -81,32 +82,8 @@ export const CountdownRedux = () => {
                     </button>
                 </div>
                 {
-                    showSettings &&
-                    <div className={styles.countdown_controls}>
-                        <label htmlFor="minutes">Minutes</label>
-                        <input
-                            min={0}
-                            max={59}
-                            className={styles.countdow_input}
-                            name="minutes" type="number"
-                            value={minutes} 
-                            onChange={(e) => handleTime(CountdownType.UPDATE_MINUTES, { minutes: parseInt(e.target.value) })}
-                        >
-                        </input>
-                        <label htmlFor="seconds">Seconds</label>
-                        <input
-                            min={0}
-                            max={59}
-                            className={styles.countdow_input}
-                            name="seconds"
-                            type="number"
-                            value={seconds}
-                            onChange={(e) => handleTime(CountdownType.UPDATE_SECONDS, { seconds: parseInt(e.target.value) })}
-                        >
-                        </input>
-                    </div>
+                    showSettings && <Settings minutes={minutes} seconds={seconds} handleTime={handleTime} />
                 }
-
             </div></>
 
     );

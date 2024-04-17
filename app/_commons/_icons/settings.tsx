@@ -1,4 +1,4 @@
-export const Settings = ({...props}) => {
+export const SettingsIcon = ({...props}) => {
     return (
         <div {...props} style={{cursor: 'pointer'}}>
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="43px" height="33.284px" viewBox="0 0 122.88 95.089" enableBackground="new 0 0 122.88 95.089" fill="chocolate">

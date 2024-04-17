@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "../../page.module.css";
 import { getTime, getFormat } from '../../_utils';
-import { Settings } from '../../_commons/_icons';
+import { SettingsIcon } from '../../_commons/_icons';
 
 export const Countdown = () => {
     const [counter, setCounter] = useState<number>(0);
@@ -49,7 +49,7 @@ export const Countdown = () => {
         <>
             <div className={styles.countdown_header}>
                 <h2>Counter</h2>
-                <Settings onClick={toggleControls} />
+                <SettingsIcon onClick={toggleControls} />
             </div>
             <div className={styles.card}>
                 <div
