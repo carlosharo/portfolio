@@ -1,6 +1,6 @@
-import styles from '../page.module.css';
+import styles from '../../page.module.css';
 import Image from 'next/image';
-import getArticles from '../data/getArticles';
+import getArticles from '../../data/getArticles';
 
 export default async function ArticlesList() {
 

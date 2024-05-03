@@ -1,6 +1,6 @@
 import { Container } from '@mui/material';
-import { logos } from '../_commons/mocks/footer';
-import { ImageBase } from '../_commons/ImageBase';
+import { logos } from '../_mocks/footer';
+import { ImageBase } from './ImageBase';
 
 export const FooterLayout = () => {
     return (

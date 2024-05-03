@@ -7,7 +7,7 @@ interface SettingsProps {
     seconds: number;
     handleTime: (type: CountdownType, payload: ActionPayload) => void;
 }
-
+ // eslint-disable-next-line react/display-name    
 export const Settings = memo(({ minutes, seconds, handleTime }: SettingsProps) => {
     
     return (
