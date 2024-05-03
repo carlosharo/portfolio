@@ -42,7 +42,7 @@ export const Countdown = () => {
             }
         }, 1000);
         return () => clearInterval(interval);
-    }, [counter]);
+    }, [counter, isRunning]);
 
 
     return (

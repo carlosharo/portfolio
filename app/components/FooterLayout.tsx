@@ -1,16 +1,20 @@
-import styles from "../page.module.css";
-import Image from 'next/image';
+import { Container } from '@mui/material';
+import { logos } from '../_commons/mocks/footer';
+import { ImageBase } from '../_commons/ImageBase';
 
 export const FooterLayout = () => {
     return (
-        <footer className={styles.footer}>
-            <Image
-                className={styles.logo}
-                src="./next.svg"
-                alt="Next.js Logo"
-                width={180}
-                height={37}
-                priority
-            />
-        </footer>);
+        <Container
+            sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                gap: { xs: 8 },
+                py: { xs: 2, sm: 4 },
+                textAlign: { sm: 'center', md: 'left' },
+                maxWidth: { sm: '100%' },
+            }}
+        >
+            {logos.map((logo, i) => <ImageBase key={i} {...logo} />)}
+        </Container>);
 }
