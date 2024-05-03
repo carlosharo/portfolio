@@ -55,7 +55,7 @@ export const CountdownRedux = () => {
             }
         }, 1000);
         return () => clearInterval(interval);
-    }, [counter]);
+    }, [counter, isRunning]);
 
     return (
         <>
