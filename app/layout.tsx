@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { FooterLayout } from "./_commons/_components/FooterLayout";
-import { HeaderLayout } from "./_commons/_components/HeaderLayout";
+import { FooterLayout } from "./components/FooterLayout";
+import { HeaderLayout } from "./components/HeaderLayout";
 import "./globals.css";
-import styles from "./page.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { PTContainer } from "./_commons/_components/PTContainer";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -19,13 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <HeaderLayout />
-        <div className={styles.body_container}>
-          <main className={styles.main}>
-            {children}
-          </main>
-        </div>
+        <PTContainer>
+          {children}
+        </PTContainer>
         <FooterLayout />
       </body>
     </html>

@@ -1,32 +1,39 @@
-import styles from "./page.module.css";
-import Image from 'next/image';
-import profilePic from '../public/me.jpeg'
+import { Box, Card, Grid, Typography } from '@mui/material';
+import { ImageBase } from './_commons/_components/ImageBase';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div>
-        <p>
-          <Image
-            className={styles.avatar}
-            src={profilePic}
-            alt="Picture of the author"
-            width={150}
-            height={150} />
-        </p>
-      </div>
-      <div className={styles.colum}>
-        <div className={styles.card}>
-          <h2>Carlos Jimenez Haro </h2>
-          <p>Frontend Developer in Svitla Systems, Inc. | NextJs, React, JavaScript, GraphQL</p>
-        </div>
-        <div className={styles.card}>
-          <p>
-            I am a software engineer with over seven years of experience in front-end development, specializing in React and JavaScript. I am passionate about creating innovative, functional and attractive web solutions that meet the needs of users and clients.
-          </p>
-        </div>
-      </div>
-    </main >
+    <Box sx={{ flexGrow: 1 }} >
+      <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid xs={2} />
+        <Grid xs={5}>
+          <Card sx={{ bgcolor: '#000', color: '#fff' }}>
+            <div>
+              <div>
+                <Typography variant='h4'>I am Carlos </Typography>
+                <Typography variant='h3' sx={{
+                  backgroundImage: 'linear-gradient(90deg, blue, white)',
+                  backgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}>Frontend Developer  NextJs, React, JavaScript, GraphQL</Typography>
+              </div>
+              <div>
+                <Typography paragraph>
+                  I am a software engineer with over seven years of experience in front-end development, specializing in React and JavaScript. I am passionate about creating innovative, functional and attractive web solutions that meet the needs of users and clients.
+                </Typography>
+              </div>
+            </div>
+          </Card>
+        </Grid>
+        <Grid xs={1}/>
+        <Grid xs={2}>
+          <Card sx={{ maxWidth: 150 }}>
+            <ImageBase src={'./me.jpeg'} alt={'avatar'} />
+          </Card>
+        </Grid>
+        <Grid xs={2}/>
+      </Grid>
+    </Box>
   );
 }
 
