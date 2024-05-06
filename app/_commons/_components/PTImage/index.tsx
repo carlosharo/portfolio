@@ -7,7 +7,7 @@ interface ImageBaseProps {
     text?: string | null;
 }
 
-export const ImageBase = (props: ImageBaseProps) => {
+export const PTImage = (props: ImageBaseProps) => {
     const { src, alt, text } = props;
     return (
         <Box
@@ -22,7 +22,7 @@ export const ImageBase = (props: ImageBaseProps) => {
                 alt={alt}
                 width={0}
                 height={0}
-                style={{ width: '100%', height: '100%' }}
+                style={{ width: '100%', height: '100%', borderRadius: '50%', backgroundColor: 'none' }}
             />
             {text && <Typography variant='h3'>{text}</Typography>}
         </Box>

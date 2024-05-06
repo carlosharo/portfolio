@@ -1,6 +1,6 @@
 import { Container } from '@mui/material';
 import { logos } from '../_commons/_mocks/footer';
-import { ImageBase } from '../_commons/_components/ImageBase';
+import { PTImage } from '../_commons/_components/PTImage';
 
 export const FooterLayout = () => {
     return (
@@ -17,6 +17,6 @@ export const FooterLayout = () => {
                 color: '#fff',
             }}
         >
-            {logos.map((logo, i) => <ImageBase key={i} {...logo} />)}
+            {logos.map((logo, i) => <PTImage key={i} {...logo} />)}
         </Container>);
 }

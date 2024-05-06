@@ -1,12 +1,13 @@
 import { Box, Card, Grid, Typography } from '@mui/material';
-import { ImageBase } from './_commons/_components/ImageBase';
+import { PTGrid } from './_commons/_components/PTGrid';
+import { PTImage } from './_commons/_components/PTImage';
 
 export default function Home() {
   return (
-    <Box sx={{ flexGrow: 1 }} >
-      <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid xs={2} />
-        <Grid xs={5}>
+    <Box >
+      <PTGrid>
+        <Grid md={2} />
+        <Grid md={5}>
           <Card sx={{ bgcolor: '#000', color: '#fff' }}>
             <div>
               <div>
@@ -25,14 +26,14 @@ export default function Home() {
             </div>
           </Card>
         </Grid>
-        <Grid xs={1}/>
-        <Grid xs={2}>
-          <Card sx={{ maxWidth: 150 }}>
-            <ImageBase src={'./me.jpeg'} alt={'avatar'} />
+        <Grid md={1}/>
+        <Grid md={2}>
+          <Card sx={{ maxWidth: 150, backgroundColor: 'transparent' }} >
+            <PTImage src={'./me.jpeg'} alt={'avatar'} />
           </Card>
         </Grid>
-        <Grid xs={2}/>
-      </Grid>
+        <Grid md={2}/>
+      </PTGrid>
     </Box>
   );
 }
