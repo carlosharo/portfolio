@@ -3,7 +3,7 @@ import { Container } from "@mui/material";
 import React, { ReactNode } from "react";
 
 interface PTcontainerProps {
-    children: ReactNode
+    children: ReactNode;
 }
 
 export const PTContainer = ({ children } : PTcontainerProps) => {
