@@ -1,17 +1,25 @@
-import { Card, SxProps, Theme } from "@mui/material";
+import { Card, CardContent, SxProps, Theme } from "@mui/material";
 import { ReactNode } from "react";
 
-interface PTCard {
+interface PTCardProps {
     children: ReactNode;
     sx?: SxProps<Theme> | undefined;
 }
 
-export const PTCard = ({ children, sx }: PTCard) => {
+export const PTCard = ({ children, sx }: PTCardProps) => {
     return (
         <Card
-            sx={{ bgcolor: '#000', color: '#fff', ...sx }}
+            sx={{ minWidth: { xs: 200, md: 400 }, bgcolor: 'transparent', color: '#fff', ...sx }}
         >
             {children}
         </Card>
+    );
+}
+
+export const PTCardContent = ({ children, sx }: PTCardProps) => {
+    return (
+        <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', ...sx}}>
+        {children}
+    </CardContent>
     );
 }

@@ -1,8 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
-import styles from "../../page.module.css";
-import { getTime, getFormat } from '../../_utils';
-import { SettingsIcon } from '../../_commons/_icons';
+import { getTime, getFormat } from '../../../_utils';
+import { SettingsIcon } from '../../../_commons/_icons';
 
 export const Countdown = () => {
     const [counter, setCounter] = useState<number>(0);
@@ -47,23 +46,20 @@ export const Countdown = () => {
 
     return (
         <>
-            <div className={styles.countdown_header}>
+            <div>
                 <h2>Counter</h2>
                 <SettingsIcon onClick={toggleControls} />
             </div>
-            <div className={styles.card}>
+            <div>
                 <div
                     key='countdown'
-                    className={+currentMinutes <= 0 && +currentSeconds <= 0 ? '' : +currentMinutes < 15 ? styles.alert : +currentMinutes < 20 ? styles.warning : ''}
                 >
                     <div
                         key='countdow-time'
-                        className={styles.countdown}
                     >
                         {isRunning ? getFormat(currentMinutes, currentSeconds) : 'TIME IS UP'}
                     </div>
                     <button
-                        className={styles.startbutton}
                         onClick={handleStart}
                     >
                         {buttonText}
@@ -71,12 +67,11 @@ export const Countdown = () => {
                 </div>
                 {
                     showControls &&
-                    <div className={styles.countdown_controls}>
+                    <div >
                         <label htmlFor="minutes">Minutes</label>
                         <input
                             min={0}
                             max={59}
-                            className={styles.countdow_input}
                             name="minutes" type="number"
                             value={minutes} onChange={(e) => handleTime(e, setMinutes)}
                         >
@@ -85,7 +80,6 @@ export const Countdown = () => {
                         <input
                             min={0}
                             max={59}
-                            className={styles.countdow_input}
                             name="seconds"
                             type="number"
                             value={seconds}

@@ -1,11 +1,11 @@
 'use client'
 import { useEffect, useReducer, useCallback } from "react";
-import styles from "../../page.module.css";
-import { getTime, getFormat } from '../../_utils';
-import { SettingsIcon } from '../../_commons/_icons';
-import { ActionPayload, countdownReducer, CountdownType, initialState } from '../../_reducers'
+import { getTime, getFormat } from '../../../_utils';
+import { SettingsIcon } from '../../../_commons/_icons';
+import { ActionPayload, countdownReducer, CountdownType, initialState } from '../../../_reducers'
 import { Settings } from "./settings";
-import { Box } from "@mui/material";
+import { PTCard, PTCardContent } from "@/app/_commons/_components";
+import { Button, CardActions, CardContent, CardHeader, Grid, Typography } from "@mui/material";
 
 export const CountdownRedux = () => {
     const [state, dispatch] = useReducer(countdownReducer, initialState);
@@ -59,34 +59,25 @@ export const CountdownRedux = () => {
     }, [counter, isRunning]);
 
     return (
-        <Box sx={{color: 'white'}}>
-            <div className={styles.countdown_header}>
-                <h2>Counter</h2>
-                <SettingsIcon onClick={toggleSettings} />
-            </div>
-            <div className={styles.card}>
-                <div
-                    key='countdown'
-                    className={+currentMinutes <= 0 && +currentSeconds <= 0 ? '' : +currentMinutes < 15 ? styles.alert : +currentMinutes < 20 ? styles.warning : ''}
+        <>
+            <PTCard>
+                <CardHeader
+                    title='Counter'
+                    action={<SettingsIcon onClick={toggleSettings} />}
                 >
-                    <div
-                        key='countdow-time'
-                        className={styles.countdown}
-                    >
+                </CardHeader>
+                <PTCardContent>
+                    <Typography sx={{ typography: { xs: 'h5', md: 'h2' } }}>
                         {isRunning ? getFormat(currentMinutes, currentSeconds) : 'TIME IS UP'}
-                    </div>
-                    <button
-                        className={styles.startbutton}
-                        onClick={handleStart}
-                    >
+                    </Typography>
+                    <Button variant="contained" fullWidth onClick={handleStart}>
                         {buttonText}
-                    </button>
-                </div>
-                {
-                    showSettings && <Settings minutes={minutes} seconds={seconds} handleTime={handleTime} />
-                }
-            </div>
-        </Box>
-
+                    </Button>
+                </PTCardContent>
+                {showSettings && <CardActions>
+                    <Settings minutes={minutes} seconds={seconds} handleTime={handleTime} />
+                </CardActions>}
+            </PTCard>
+        </>
     );
 }

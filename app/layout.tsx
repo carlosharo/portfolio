@@ -3,6 +3,8 @@ import { FooterLayout } from "./_layout/Footer";
 import { HeaderLayout } from "./_layout/Header";
 import "./globals.css";
 import { PTContainer } from "./_commons/_components/PTContainer";
+import { PTGrid } from "./_commons/_components";
+import { Grid } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -19,7 +21,13 @@ export default function RootLayout({
       <body>
         <HeaderLayout />
         <PTContainer>
-          {children}
+          <PTGrid>
+            <Grid xs={1} />
+            <Grid xs={10} >
+              {children}
+            </Grid>
+            <Grid xs={1} />
+          </PTGrid>
         </PTContainer>
         <FooterLayout />
       </body>

@@ -3,7 +3,6 @@ import { PTImage, PTGrid, PTCard } from './_commons/_components';
 
 export default function Home() {
   return (
-    <Box >
       <PTGrid>
         <Grid md={6}>
           <PTCard>
@@ -20,12 +19,11 @@ export default function Home() {
         </Grid>
         <Grid md={1} />
         <Grid md={2}>
-          <Card sx={{ maxWidth: 150, backgroundColor: 'transparent' }} >
+          <PTCard sx={{ maxWidth: 200, minWidth: 200, backgroundColor: 'transparent' }} >
             <PTImage src='./me.jpeg' alt='avatar' style={{ borderRadius: '50%' }} />
-          </Card>
+          </PTCard>
         </Grid>
       </PTGrid>
-    </Box>
   );
 }
 
