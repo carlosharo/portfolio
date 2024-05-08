@@ -13,7 +13,7 @@ export default function Home() {
         <Grid md={1} />
         <Grid md={4}>
           <PTCard>
-            <Typography variant='h5'>Portfolio Under Construction</Typography>
+            <Typography variant='h5'>Under Construction</Typography>
           </PTCard>
         </Grid>
       </PTGrid>
