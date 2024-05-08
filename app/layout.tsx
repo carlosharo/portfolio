@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { FooterLayout } from "./components/FooterLayout";
-import { HeaderLayout } from "./components/HeaderLayout";
+import { FooterLayout } from "./_layout/FooterLayout";
+import { HeaderLayout } from "./_layout/HeaderLayout";
 import "./globals.css";
 import { PTContainer } from "./_commons/_components/PTContainer";
 

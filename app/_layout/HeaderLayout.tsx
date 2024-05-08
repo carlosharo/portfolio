@@ -10,23 +10,20 @@ export const HeaderLayout = () => {
                 </div>
                 <ul>
                     <li>
-                        <Link href="/about">About</Link>
+                        <Link href="/tools">Tools</Link>
                     </li>
                     <li>
-                        <Link href="/articles">Articles</Link>
+                        <Link href="/algorithms">Algorithms</Link>
                     </li>
                     <li>
                         <Link href="/review">Review</Link>
                     </li>
                     <li>
-                        <Link href="/settings">Settings</Link>
-                    </li>
-                    <li>
-                        <Link href="/contact">Contact</Link>
+                        <Link href="/articles">Articles</Link>
                     </li>
                 </ul>
                 <div className={styles.social}>
-                    <Link href="/social">Social</Link>
+                    <Link href="/social">Others</Link>
                 </div>
             </nav>
         </header>
