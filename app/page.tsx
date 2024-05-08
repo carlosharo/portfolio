@@ -5,20 +5,7 @@ export default function Home() {
   return (
     <Box >
       <PTGrid>
-        <Grid md={3}>
-          <PTCard>
-            <PTImage src='./mac_under_construction.jpeg' alt='avatar' />
-          </PTCard>
-        </Grid>
-        <Grid md={1} />
-        <Grid md={4}>
-          <PTCard>
-            <Typography variant='h5'>Under Construction</Typography>
-          </PTCard>
-        </Grid>
-      </PTGrid>
-      <PTGrid>
-        <Grid md={5}>
+        <Grid md={6}>
           <PTCard>
             <Typography variant='h4'>I am Carlos </Typography>
             <Typography variant='h3' sx={{

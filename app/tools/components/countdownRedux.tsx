@@ -5,6 +5,7 @@ import { getTime, getFormat } from '../../_utils';
 import { SettingsIcon } from '../../_commons/_icons';
 import { ActionPayload, countdownReducer, CountdownType, initialState } from '../../_reducers'
 import { Settings } from "./settings";
+import { Box } from "@mui/material";
 
 export const CountdownRedux = () => {
     const [state, dispatch] = useReducer(countdownReducer, initialState);
@@ -58,7 +59,7 @@ export const CountdownRedux = () => {
     }, [counter, isRunning]);
 
     return (
-        <>
+        <Box sx={{color: 'white'}}>
             <div className={styles.countdown_header}>
                 <h2>Counter</h2>
                 <SettingsIcon onClick={toggleSettings} />
@@ -84,7 +85,8 @@ export const CountdownRedux = () => {
                 {
                     showSettings && <Settings minutes={minutes} seconds={seconds} handleTime={handleTime} />
                 }
-            </div></>
+            </div>
+        </Box>
 
     );
 }

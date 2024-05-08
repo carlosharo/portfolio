@@ -1,5 +1,7 @@
+import { UnderConstrucction } from "../_commons/_components/_TempUnderConstruction";
+
 export default function About() {
     return (
-        <h2>Algorithms page in process</h2>
+        <UnderConstrucction />
     );
 }

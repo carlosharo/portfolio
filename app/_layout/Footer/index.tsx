@@ -1,6 +1,6 @@
 import { Container } from '@mui/material';
-import { logos } from '../_commons/_mocks/footer';
-import { PTImage } from '../_commons/_components/PTImage';
+import { logos } from '../../_commons/_mocks/footer';
+import { PTImage } from '../../_commons/_components/PTImage';
 
 export const FooterLayout = () => {
     return (
