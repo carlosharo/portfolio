@@ -13,8 +13,6 @@ export const HeaderDesktop = ({ handleCloseNavMenu, layout }: HeaderDesktopProps
         <><Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
             sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -25,7 +23,7 @@ export const HeaderDesktop = ({ handleCloseNavMenu, layout }: HeaderDesktopProps
                 textDecoration: 'none',
             }}
         >
-            PORTFOLIO
+            <Link href='/'>PORTFOLIO</Link>
         </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {layout.pages.map((page) => (

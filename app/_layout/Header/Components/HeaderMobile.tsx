@@ -55,8 +55,6 @@ export const HeaderMobile = ({ handleOpenNavMenu, handleCloseNavMenu, anchorElNa
         </Box><Typography
             variant="h5"
             noWrap
-            component="a"
-            href="/"
             sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
@@ -68,7 +66,7 @@ export const HeaderMobile = ({ handleOpenNavMenu, handleCloseNavMenu, anchorElNa
                 textDecoration: 'none',
             }}
         >
-                PORTFOLIO
+                <Link href='/'>PORTFOLIO</Link>
             </Typography></>
     );
 }
