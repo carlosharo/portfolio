@@ -9,7 +9,7 @@ interface PTCardProps {
 export const PTCard = ({ children, sx }: PTCardProps) => {
     return (
         <Card
-            sx={{ minWidth: { xs: 200, md: 400 }, bgcolor: 'transparent', color: '#fff', ...sx }}
+            sx={{ minWidth: { xs: 300, md: '100%' }, bgcolor: 'transparent', color: '#fff', ...sx }}
         >
             {children}
         </Card>

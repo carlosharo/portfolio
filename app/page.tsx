@@ -4,7 +4,7 @@ import { PTImage, PTGrid, PTCard } from './_commons/_components';
 export default function Home() {
   return (
       <PTGrid>
-        <Grid md={6}>
+        <Grid md={8}>
           <PTCard>
             <Typography variant='h4'>I am Carlos </Typography>
             <Typography variant='h3' sx={{
@@ -17,8 +17,8 @@ export default function Home() {
             </Typography>
           </PTCard>
         </Grid>
-        <Grid md={1} />
-        <Grid md={2}>
+        <Grid md={1}/>
+        <Grid md={3}>
           <PTCard sx={{ maxWidth: 200, minWidth: 200, backgroundColor: 'transparent' }} >
             <PTImage src='./me.jpeg' alt='avatar' style={{ borderRadius: '50%' }} />
           </PTCard>

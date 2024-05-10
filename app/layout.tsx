@@ -22,11 +22,9 @@ export default function RootLayout({
         <HeaderLayout />
         <PTContainer>
           <PTGrid>
-            <Grid xs={1} />
-            <Grid xs={10} >
+            <Grid md={10}>
               {children}
             </Grid>
-            <Grid xs={1} />
           </PTGrid>
         </PTContainer>
         <FooterLayout />

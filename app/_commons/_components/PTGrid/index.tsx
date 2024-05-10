@@ -11,7 +11,8 @@ export const PTGrid = ({ children }: PTBoxProps) => {
         rowGap={{ xs: 4 }}
         py={{ xs: 2, md: 4, lg: 6 }}
         direction={{ xs: 'column', md: 'row' }}
-        alignItems={{ xs: 'center' }}
+        alignItems='center'
+        justifyContent='center'
     >
         {children}
     </Grid>

@@ -59,7 +59,6 @@ export const CountdownRedux = () => {
     }, [counter, isRunning]);
 
     return (
-        <>
             <PTCard>
                 <CardHeader
                     title='Counter'
@@ -78,6 +77,5 @@ export const CountdownRedux = () => {
                     <Settings minutes={minutes} seconds={seconds} handleTime={handleTime} />
                 </CardActions>}
             </PTCard>
-        </>
     );
 }
