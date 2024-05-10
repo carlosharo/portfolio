@@ -6,7 +6,7 @@ interface PTcontainerProps {
     children: ReactNode;
 }
 
-export const PTContainer = ({ children } : PTcontainerProps) => {
+export const PTContainer = ({ children }: PTcontainerProps) => {
     return <Container
         sx={{
             display: 'flex',

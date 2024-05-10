@@ -22,7 +22,7 @@ export default function RootLayout({
         <HeaderLayout />
         <PTContainer>
           <PTGrid>
-            <Grid md={10}>
+            <Grid md={12}>
               {children}
             </Grid>
           </PTGrid>

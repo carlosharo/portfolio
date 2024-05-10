@@ -15,7 +15,7 @@ export const HeaderLayout = () => {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" sx={{backgroundColor: '#0e0c43', borderBottom: '1px solid blue'}}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <HeaderDesktop {...{ handleCloseNavMenu, layout }} />
