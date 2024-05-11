@@ -59,14 +59,14 @@ export const CountdownRedux = () => {
     }, [counter, isRunning]);
 
     return (
-            <PTCard>
+            <PTCard styled>
                 <CardHeader
                     title='Counter'
                     action={<SettingsIcon onClick={toggleSettings} />}
                 >
                 </CardHeader>
                 <PTCardContent>
-                    <Typography sx={{ typography: { xs: 'h5', md: 'h2' } }}>
+                    <Typography sx={{ typography: { xs: 'h3', md: 'h2' } }}>
                         {isRunning ? getFormat(currentMinutes, currentSeconds) : 'TIME IS UP'}
                     </Typography>
                     <Button variant="contained" fullWidth onClick={handleStart}>
