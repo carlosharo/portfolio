@@ -1,6 +1,6 @@
 export const Reactjs = ({ ...props }) => {
     return (
-        <div {...props} style={{ cursor: 'pointer' }}>
+        <div {...props}>
             <svg viewBox="175.7 78 490.6 436.9" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                 <g fill="#fff">
                     <path

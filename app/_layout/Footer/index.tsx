@@ -1,25 +1,21 @@
-import { Container } from '@mui/material';
+import { Container, Stack, Typography } from '@mui/material';
 import { logos } from '../../_commons/_mocks';
-import { PTCard, PTGridContainer } from '@/app/_components/_commons';
+import { Item } from '../../_components/Item';
 
 export const FooterLayout = () => {
     return (
         <Container
+            maxWidth='xl'
             sx={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                gap: { xs: 8 },
-                py: { xs: 2, sm: 4 },
-                textAlign: { sm: 'center', md: 'left' },
-                maxWidth: { sm: '100%' },
-                backgroundColor: '#000',
-                color: '#fff',
+                padding: { xs: 0 }
             }}
         >
-            <PTGridContainer>
-                {logos.map((logo, i) => <PTCard key={i}>{logo}</PTCard>)}
-            </PTGridContainer>
+            <Stack
+                direction='row'
+                justifyContent='center'
+                spacing={{ xs: 1, md: 4 }}
+            >
+                {logos.map((logo, i) => <Item key={i} >{logo}</Item>)}
+            </Stack>
         </Container>);
 }

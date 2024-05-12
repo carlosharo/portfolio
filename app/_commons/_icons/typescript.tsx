@@ -1,6 +1,6 @@
 export const Typescript = ({ ...props }) => {
     return (
-        <div {...props} style={{ cursor: 'pointer' }}>
+        <div {...props}>
             <svg viewBox="0 0 640 640" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                 <path d="m0 0h640v640h-640z" fill="#fff" />
                 <path

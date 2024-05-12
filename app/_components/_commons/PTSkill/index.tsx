@@ -7,15 +7,13 @@ interface PTSkillsProps {
     icon?: ReactNode;
 }
 
-export const PTSkill = ({ name, icon}: PTSkillsProps) => {
+export const PTSkill = ({ name, icon }: PTSkillsProps) => {
     return (
-        <Grid md={1}>
-            <PTCard>
-                <PTCardContent>
-                    {icon}
-                    <Typography>{name}</Typography>
-                </PTCardContent>
-            </PTCard>
-        </Grid>
+        <PTCard>
+            <PTCardContent>
+                {icon}
+                <Typography>{name}</Typography>
+            </PTCardContent>
+        </PTCard>
     );
 }
