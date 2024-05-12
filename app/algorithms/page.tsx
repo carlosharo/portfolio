@@ -1,4 +1,4 @@
-import { UnderConstrucction } from "../_commons/_components/_TempUnderConstruction";
+import { UnderConstrucction } from "../_components/_commons/_TempUnderConstruction";
 
 export default function About() {
     return (

@@ -1,6 +1,5 @@
 import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import { LayoutProps } from '../../../_data/mock/types';
 import { Key } from "react";
 import Link from "next/link";
 
@@ -9,7 +8,7 @@ interface HeaderMobileProps {
     handleOpenNavMenu: (event: React.MouseEvent<HTMLElement>) => void;
     handleCloseNavMenu: () => void;
     anchorElNav: HTMLElement | null;
-    layout: LayoutProps;
+    layout: string[];
 }
 
 export const HeaderMobile = ({ handleOpenNavMenu, handleCloseNavMenu, anchorElNav, layout }: HeaderMobileProps) => {
@@ -44,7 +43,7 @@ export const HeaderMobile = ({ handleOpenNavMenu, handleCloseNavMenu, anchorElNa
                     display: { xs: 'block', md: 'none' },
                 }}
             >
-                {layout.pages.map((page) => (
+                {layout.map((page) => (
                     <MenuItem key={page as Key} onClick={handleCloseNavMenu}>
                         <Typography textAlign="center">
                             <Link href={`/${page.toLowerCase()}`}>{page}</Link>

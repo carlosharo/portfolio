@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { FooterLayout } from "./_layout/Footer";
 import { HeaderLayout } from "./_layout/Header";
 import "./globals.css";
-import { PTContainer } from "./_commons/_components/PTContainer";
-import { PTGrid } from "./_commons/_components";
+import { PTContainer, PTGridContainer } from "./_components/_commons";
 import { Grid } from "@mui/material";
 
 export const metadata: Metadata = {
@@ -21,11 +20,9 @@ export default function RootLayout({
       <body>
         <HeaderLayout />
         <PTContainer>
-          <PTGrid>
-            <Grid md={12}>
+          <PTGridContainer>
               {children}
-            </Grid>
-          </PTGrid>
+          </PTGridContainer>
         </PTContainer>
         <FooterLayout />
       </body>

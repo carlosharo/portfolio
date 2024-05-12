@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import { PTGrid } from "../_commons/_components";
+import { PTGridContainer } from "../_components/_commons";
 
 export default function ToolsLayout({
     children,
@@ -7,8 +7,8 @@ export default function ToolsLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <PTGrid>
+        <PTGridContainer>
             <Grid md={6}>{children}</Grid>
-        </PTGrid>
+        </PTGridContainer>
     );
 }

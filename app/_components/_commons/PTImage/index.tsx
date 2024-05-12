@@ -18,7 +18,6 @@ export const PTImage = ({ src, alt, text, style, sx }: ImageBaseProps) => {
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
-                gap: 4,
                 ...sx
             }}
         >
