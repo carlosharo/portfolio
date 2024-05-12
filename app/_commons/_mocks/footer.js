@@ -1,4 +1,4 @@
-import { NextJs, Reactjs, JavaScript, MateriaulUI, Typescript } from "../_icons";
+import { NextJs, Reactjs, JavaScript, MateriaulUI, Typescript } from "../../_commons/_icons";
 
 export const logos = [
     <NextJs key='nextjs' />,

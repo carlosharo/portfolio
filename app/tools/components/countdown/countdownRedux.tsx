@@ -4,7 +4,7 @@ import { getTime, getFormat } from '../../../_utils';
 import { SettingsIcon } from '../../../_commons/_icons';
 import { ActionPayload, countdownReducer, CountdownType, initialState } from '../../../_reducers'
 import { Settings } from "./settings";
-import { PTCard, PTCardContent } from "@/app/_commons/_components";
+import { PTCard, PTCardContent } from "@/app/_components/_commons";
 import { Button, CardActions, CardContent, CardHeader, Grid, Typography } from "@mui/material";
 
 export const CountdownRedux = () => {

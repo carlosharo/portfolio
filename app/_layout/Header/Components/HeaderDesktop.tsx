@@ -1,11 +1,10 @@
 import { Box, Button, Typography } from "@mui/material";
-import { LayoutProps } from '../../../_data/mock/types';
 import { Key } from "react";
 import Link from "next/link";
 
 interface HeaderDesktopProps {
     handleCloseNavMenu: () => void;
-    layout: LayoutProps;
+    layout: string[];
 }
 
 export const HeaderDesktop = ({ handleCloseNavMenu, layout }: HeaderDesktopProps) => {
@@ -26,7 +25,7 @@ export const HeaderDesktop = ({ handleCloseNavMenu, layout }: HeaderDesktopProps
             <Link href='/'>PORTFOLIO</Link>
         </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                {layout.pages.map((page) => (
+                {layout.map((page) => (
                     <Button
                         key={page as Key}
                         onClick={handleCloseNavMenu}

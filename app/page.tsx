@@ -1,5 +1,5 @@
-import { PersonalInfo } from './_commons/_components/PersonalInfo';
-import { Skills } from './_commons/_components/Skills';
+import { PersonalInfo } from './_components/PersonalInfo';
+import { Skills } from './_components/Skills';
 
 export default function Home() {
   return (
