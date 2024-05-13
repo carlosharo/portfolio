@@ -1,21 +1,12 @@
-import { Container, Stack, Typography } from '@mui/material';
 import { logos } from '../../_commons/_mocks';
-import { Item } from '../../_components/Item';
+import { PTPaper } from '../../_components/PTPaper';
+import { PTContainer, PTStack } from '@/app/_components';
 
 export const FooterLayout = () => {
     return (
-        <Container
-            maxWidth='xl'
-            sx={{
-                padding: { xs: 0 }
-            }}
-        >
-            <Stack
-                direction='row'
-                justifyContent='center'
-                spacing={{ xs: 1, md: 4 }}
-            >
-                {logos.map((logo, i) => <Item key={i} >{logo}</Item>)}
-            </Stack>
-        </Container>);
+        <PTContainer>
+            <PTStack>
+                {logos.map((logo, i) => <PTPaper key={i} >{logo}</PTPaper>)}
+            </PTStack>
+        </PTContainer>);
 }
