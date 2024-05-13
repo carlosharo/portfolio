@@ -15,5 +15,4 @@ export const PTPaper = styled(({ children, ...props }: PTPaperProps) => {
     padding: theme.spacing(1),
     textAlign: 'center',
     alignContent: 'center',
-    maxWidth: 60,
 }));
