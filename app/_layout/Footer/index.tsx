@@ -1,13 +1,11 @@
-'use client'
-import { theme } from '@/app/theme';
 import { logos } from '../../_commons/_mocks';
 import { PTPaper } from '../../_components/PTPaper';
-import { PTContainer, PTStack } from '@/app/_components';
+import { PTBox, PTContainer, PTStack } from '@/app/_components';
 
 export const FooterLayout = () => {
-    return (
+    return <PTBox>
         <PTContainer>
-            <PTStack sx={{borderTop: `1px solid ${theme.palette.primary.main}`}}>
+            <PTStack >
                 {logos.map((logo, i) => <PTPaper
                     sx={{
                         height: { xs: 50, md: 75 },
@@ -19,5 +17,6 @@ export const FooterLayout = () => {
                 </PTPaper>
                 )}
             </PTStack>
-        </PTContainer>);
+        </PTContainer>
+    </PTBox>
 }

@@ -13,7 +13,7 @@ export const Body = ({children}: BodyProps) => {
     return (
         <body>
             <ThemeProvider theme={theme}>
-                <HeaderLayout />
+                <HeaderLayout /> 
                 <PTContainer>
                     <PTGridContainer>
                         {children}

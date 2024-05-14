@@ -2,7 +2,7 @@
 import { Container, ContainerProps, styled } from "@mui/material";
 import { ReactNode } from "react";
 
-interface PTContainerProps extends ContainerProps{
+interface PTContainerProps extends ContainerProps {
     children: ReactNode;
 }
 
@@ -13,9 +13,9 @@ export const PTContainer = styled(({ children, ...props }: PTContainerProps) => 
             padding: { xs: 0 }
         }}
         {...props}
-        >
+    >
         {children}
-    </Container>;
+    </Container>
 })(({ theme }) => ({
     backgroundColor: theme.palette.background.default
 }));

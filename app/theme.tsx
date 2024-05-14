@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material";
-import { blueGrey, grey } from "@mui/material/colors";
+import { blueGrey } from "@mui/material/colors";
 
 export const theme = createTheme({
     palette: {
@@ -8,11 +8,11 @@ export const theme = createTheme({
         main: blueGrey[900],
         dark: '#000',
         light: blueGrey[800],
-        contrastText: blueGrey[200],
+        contrastText: 'white',
       },
       background: {
         default: '#000',
-        paper: '#121',
+        paper: '#1d1c29', 
       }
     },
   });
