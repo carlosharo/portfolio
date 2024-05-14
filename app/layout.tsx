@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { FooterLayout } from "./_layout/Footer";
-import { HeaderLayout } from "./_layout/Header";
 import "./globals.css";
-import { PTContainer, PTGridContainer } from "./_components/_commons";
-import { Grid } from "@mui/material";
+import { Body } from "./_layout";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -17,15 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <HeaderLayout />
-        <PTContainer>
-          <PTGridContainer>
-              {children}
-          </PTGridContainer>
-        </PTContainer>
-        <FooterLayout />
-      </body>
+      <Body>{children}</Body>
     </html>
   );
 }
