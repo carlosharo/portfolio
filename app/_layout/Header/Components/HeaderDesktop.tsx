@@ -29,7 +29,15 @@ export const HeaderDesktop = ({ handleCloseNavMenu, layout }: HeaderDesktopProps
                     <Button
                         key={page as Key}
                         onClick={handleCloseNavMenu}
-                        sx={{ my: 2, color: 'white', display: 'block' }}
+                        sx={{ 
+                            my: 2, 
+                            display: 'block',
+                            '&:hover':{
+                                borderBottom: `1px solid red`,
+                                backgroundColor: 'unset',
+                                borderRadius: 0,
+                            }
+                        }}
                     >
                         <Link href={`/${page.toLowerCase()}`}>{page}</Link>
                     </Button>

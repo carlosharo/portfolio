@@ -1,9 +1,10 @@
 'use client'
-import { AppBar, Container, Toolbar } from "@mui/material";
 import { useState } from "react";
 import { layout } from '../../_commons/_mocks';
 import { HeaderMobile } from "./Components/HeaderMobile";
 import { HeaderDesktop } from "./Components/HeaderDesktop";
+import { PTAppBar, PTContainer } from "@/app/_components";
+import { Toolbar } from "@mui/material";
 
 export const HeaderLayout = () => {
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -15,13 +16,13 @@ export const HeaderLayout = () => {
     };
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: '#0e0c43', borderBottom: '1px solid blue' }}>
-            <Container maxWidth="xl">
+        <PTAppBar position="static">
+            <PTContainer maxWidth='lg'>
                 <Toolbar disableGutters>
                     <HeaderDesktop {...{ handleCloseNavMenu, layout }} />
                     <HeaderMobile {...{ handleOpenNavMenu, handleCloseNavMenu, anchorElNav, layout }} />
                 </Toolbar>
-            </Container>
-        </AppBar>
+            </PTContainer>
+        </PTAppBar>
     );
 }

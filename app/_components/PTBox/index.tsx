@@ -13,5 +13,5 @@ export const PTBox = styled(({ children, ...props }: PTBoxProps) => {
         {children}
     </Box>;
 })(({ theme }) => ({
-    backgroundColor: theme.palette.background.paper
+    backgroundColor: theme.palette.background.default
 }));

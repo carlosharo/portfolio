@@ -9,13 +9,10 @@ interface PTContainerProps extends ContainerProps {
 export const PTContainer = styled(({ children, ...props }: PTContainerProps) => {
     return <Container
         maxWidth='xl'
-        sx={{
-            padding: { xs: 0 }
-        }}
         {...props}
     >
         {children}
     </Container>
 })(({ theme }) => ({
-    backgroundColor: theme.palette.background.default
+    backgroundColor: theme.palette.background.paper
 }));

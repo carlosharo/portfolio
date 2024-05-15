@@ -1,7 +1,8 @@
-import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
+import { Box, IconButton, Menu, MenuItem, MenuList, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import { Key } from "react";
 import Link from "next/link";
+import { PTMenu, PTMenuItem } from "@/app/_components";
 
 
 interface HeaderMobileProps {
@@ -25,32 +26,19 @@ export const HeaderMobile = ({ handleOpenNavMenu, handleCloseNavMenu, anchorElNa
                 <MenuIcon />
             </IconButton>
 
-            <Menu
-                id="menu-appbar"
+            <PTMenu
                 anchorEl={anchorElNav}
-                anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                }}
-                keepMounted
-                transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'left',
-                }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
-                sx={{
-                    display: { xs: 'block', md: 'none' },
-                }}
             >
-                {layout.map((page) => (
-                    <MenuItem key={page as Key} onClick={handleCloseNavMenu}>
-                        <Typography textAlign="center">
-                            <Link href={`/${page.toLowerCase()}`}>{page}</Link>
-                        </Typography>
-                    </MenuItem>
-                ))}
-            </Menu>
+                    {layout.map((page) => (
+                        <PTMenuItem key={page as Key} onClick={handleCloseNavMenu}>
+                            <Typography textAlign="center">
+                                <Link href={`/${page.toLowerCase()}`}>{page}</Link>
+                            </Typography>
+                        </PTMenuItem>
+                    ))}
+            </PTMenu>
         </Box><Typography
             variant="h5"
             noWrap

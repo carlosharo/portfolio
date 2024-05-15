@@ -3,7 +3,7 @@ import { PTPaper } from '../../_components/PTPaper';
 import { PTBox, PTContainer, PTStack } from '@/app/_components';
 
 export const FooterLayout = () => {
-    return <PTBox>
+    return <PTBox sx={{ bgcolor: 'background.paper'}}>
         <PTContainer>
             <PTStack >
                 {logos.map((logo, i) => <PTPaper

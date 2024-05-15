@@ -11,7 +11,6 @@ export const PTPaper = styled(({ children, ...props }: PTPaperProps) => {
         {...props}
     >{children}</Paper>
 })(({ theme }) => ({
-    backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(1),
     textAlign: 'center',
     alignContent: 'center',
