@@ -4,8 +4,8 @@ import { getTime, getFormat } from '../../../_utils';
 import { SettingsIcon } from '../../../_commons/_icons';
 import { ActionPayload, countdownReducer, CountdownType, initialState } from '../../../_reducers'
 import { Settings } from "./settings";
-import { PTCard, PTCardContent } from "@/app/_components/_commons";
-import { Button, CardActions, CardContent, CardHeader, Grid, Typography } from "@mui/material";
+import { Button, CardActions, CardHeader, Typography } from "@mui/material";
+import { PTCardContainer, PTCardContent } from "@/app/_components";
 
 export const CountdownRedux = () => {
     const [state, dispatch] = useReducer(countdownReducer, initialState);
@@ -59,7 +59,7 @@ export const CountdownRedux = () => {
     }, [counter, isRunning]);
 
     return (
-            <PTCard styled>
+            <PTCardContainer >
                 <CardHeader
                     title='Counter'
                     action={<SettingsIcon onClick={toggleSettings} />}
@@ -76,6 +76,6 @@ export const CountdownRedux = () => {
                 {showSettings && <CardActions>
                     <Settings minutes={minutes} seconds={seconds} handleTime={handleTime} />
                 </CardActions>}
-            </PTCard>
+            </PTCardContainer>
     );
 }

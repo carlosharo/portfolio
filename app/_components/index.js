@@ -8,3 +8,6 @@ export * from './PTBox';
 export * from './PTAppBar';
 export * from './PTMenuItem';
 export * from './PTMenu';
+export * from './PTCard';
+export * from './PTGridContainer';
+export * from './PTImage';

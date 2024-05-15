@@ -1,10 +1,27 @@
 import { Grid, Stack, Typography } from "@mui/material";
 import { portfolio } from "../../_commons/_mocks";
-import { PTCardContainer, PTGridContainer, PTSkill } from "../_commons";
+import { PTCard, PTCardContainer, PTCardContent, PTGridContainer } from "..";
+import { ReactNode } from "react";
+
+interface PTSkillsProps {
+    name: string;
+    icon?: ReactNode;
+}
+
+export const Skill = ({ name, icon }: PTSkillsProps) => {
+    return (
+        <PTCard>
+            <PTCardContent sx={{ width: '100px' }}>
+                {icon}
+                <Typography>{name}</Typography>
+            </PTCardContent>
+        </PTCard>
+    );
+}
 
 export const Skills = () => {
     return (
-        <PTCardContainer styled>
+        <PTCardContainer>
             <PTGridContainer>
                 <Grid xs={12}>
                     <Typography variant='h4'>Main Skills</Typography>
@@ -14,7 +31,7 @@ export const Skills = () => {
                     justifyContent='center'
                     spacing={{ xs: 1, md: 4 }}
                 >
-                    {portfolio.mainSkills.map((skill, i) => <PTSkill key={i} {...skill} />)}
+                    {portfolio.mainSkills.map((skill, i) => <Skill key={i} {...skill} />)}
                 </Stack>
             </PTGridContainer>
         </PTCardContainer>
