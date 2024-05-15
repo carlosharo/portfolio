@@ -18,5 +18,5 @@ export const PTStack = styled(({ children, ...props }: PTContainerProps) => {
         {children}
     </Stack>;
 })(({ theme }) => ({
-    // backgroundColor: theme.palette.background.paper
+    backgroundColor: theme.palette.background.paper
 }));

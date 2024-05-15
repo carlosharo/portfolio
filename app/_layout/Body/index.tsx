@@ -12,13 +12,13 @@ interface BodyProps {
 
 export const Body = ({ children }: BodyProps) => {
     return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyles
-                styles={{
-                    body: { backgroundColor: "black" },
-                }}
-            />
-            <PTBox>
+        <body>
+            <ThemeProvider theme={theme}>
+                <GlobalStyles
+                    styles={{
+                        body: { backgroundColor: "black" },
+                    }}
+                />
                 <HeaderLayout />
                 <PTContainer>
                     <PTGridContainer>
@@ -26,7 +26,7 @@ export const Body = ({ children }: BodyProps) => {
                     </PTGridContainer>
                 </PTContainer>
                 <FooterLayout />
-            </PTBox>
-        </ThemeProvider>
+            </ThemeProvider>
+        </body>
     );
 }

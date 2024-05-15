@@ -13,6 +13,6 @@ export const PTAppBar = styled(({ children, ...props }: PTPaperProps) => {
 })(({ theme }) => ({
     backgroundImage: 'none',
     borderBottom: '2px solid transparent',
-    borderImage: `linear-gradient(0.25turn, rgba(0, 0, 0, 0), ${theme.palette.secondary.main}, rgba(0, 0, 0, 0))`,
+    borderImage: `linear-gradient(0.25turn, rgba(0, 0, 0, 0), ${theme.palette.primary.light}, rgba(0, 0, 0, 0))`,
     borderImageSlice: 1,
 }));

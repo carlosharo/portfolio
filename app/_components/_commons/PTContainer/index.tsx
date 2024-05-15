@@ -13,7 +13,7 @@ export const PTContainer = ({ children }: PTcontainerProps) => {
             flexDirection: 'row',
             justifyContent: 'center',
             backgroundColor: '#000',
-            minHeight: '80vh',
+            minHeight: '100vh',
         }}
     >
         {children}
