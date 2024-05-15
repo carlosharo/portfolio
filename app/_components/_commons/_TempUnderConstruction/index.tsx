@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import { PTCard, PTGridContainer, PTImage } from "..";
+import { PTCard, PTGridContainer, PTImage } from "../..";
 
 export const UnderConstrucction = () => {
     return (
