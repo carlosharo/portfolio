@@ -1,4 +1,3 @@
-import styles from '../../page.module.css';
 import Image from 'next/image';
 import getArticles from '../../_commons/_mocks/getArticles';
 
@@ -8,9 +7,8 @@ export default async function ArticlesList() {
 
     return (
         <div>{articles.map((articles: any) => (
-            <div key={articles.id} className={`${styles.card} ${styles.row}`}>
+            <div key={articles.id}>
                 <Image
-                    className={styles.avatar}
                     src={articles.avatar}
                     alt="avatar pic"
                     width={150}
