@@ -1,9 +1,9 @@
 'use client'
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, useTheme } from "@mui/material";
 import { PTCardContainer, PTGridContainer, PTImage } from "..";
-import { theme } from "@/app/theme";
 
 export const PersonalInfo = () => {
+    const theme = useTheme();
     return (
         <PTCardContainer >
             <PTGridContainer>

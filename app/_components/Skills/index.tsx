@@ -13,7 +13,7 @@ export const Skill = ({ name, icon }: PTSkillsProps) => {
         <PTCard>
             <PTCardContent sx={{ width: '100px' }}>
                 {icon}
-                <Typography>{name}</Typography>
+                <Typography align='center'>{name}</Typography>
             </PTCardContent>
         </PTCard>
     );
@@ -24,7 +24,7 @@ export const Skills = () => {
         <PTCardContainer>
             <PTGridContainer>
                 <Grid xs={12}>
-                    <Typography variant='h4'>Main Skills</Typography>
+                    <Typography variant='h4' align="center">Main Skills</Typography>
                 </Grid>
                 <Stack
                     direction='row'

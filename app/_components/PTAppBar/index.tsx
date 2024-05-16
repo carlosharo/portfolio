@@ -8,6 +8,7 @@ interface PTPaperProps extends AppBarProps {
 
 export const PTAppBar = styled(({ children, ...props }: PTPaperProps) => {
     return <AppBar
+    position="static"
         {...props}
     >{children}</AppBar>
 })(({ theme }) => ({

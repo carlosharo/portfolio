@@ -1,6 +1,5 @@
 'use client'
-import { theme } from "@/app/theme";
-import { MenuItem, MenuItemProps, styled } from "@mui/material";
+import { MenuItem, MenuItemProps, styled, useTheme } from "@mui/material";
 import { ReactNode } from "react";
 
 interface PTMenuItemProps extends MenuItemProps {
@@ -8,6 +7,7 @@ interface PTMenuItemProps extends MenuItemProps {
 }
 
 export const PTMenuItem = styled(({ children, ...props }: PTMenuItemProps) => {
+    const theme = useTheme()
     return <MenuItem
     sx={{
         '&:hover':{

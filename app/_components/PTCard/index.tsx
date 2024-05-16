@@ -1,6 +1,5 @@
 'use client'
-import { theme } from "@/app/theme";
-import { Card, CardContent, CardContentProps, CardProps, styled } from "@mui/material";
+import { Card, CardContent, CardContentProps, CardProps, styled, useTheme } from "@mui/material";
 import { ReactNode } from "react";
 
 interface PTCardProps {
@@ -8,13 +7,13 @@ interface PTCardProps {
 }
 
 export const PTCardContainer = ({ children, ...props }: PTCardProps & CardProps) => {
-
+    const theme = useTheme();
     return (
         <Card
             sx={{
                 minWidth: { xs: '100%' },
                 bgcolor: 'transparent',
-                color: '#fff',
+                color: theme.palette.text.primary,
                 background: `linear-gradient(to right bottom, ${theme.palette.primary.dark}, ${theme.palette.background.default})`,
                 borderRadius: '25px',
                 borderBottom: '1px solid transparent',
@@ -30,6 +29,7 @@ export const PTCardContainer = ({ children, ...props }: PTCardProps & CardProps)
 }
 
 export const PTCard = styled(({ children, ...props }: PTCardProps & CardProps) => {
+    const theme = useTheme();
     return (
         <Card
             sx={{
@@ -37,7 +37,7 @@ export const PTCard = styled(({ children, ...props }: PTCardProps & CardProps) =
                 alignContent: 'center',
                 justifyContent: 'center',
                 bgcolor: 'transparent',
-                color: '#fff',
+                color: theme.palette.text.primary,
             }}
             {...props}
         >
