@@ -15,8 +15,8 @@ export const PersonalInfo = () => {
                         WebkitTextFillColor: 'transparent',
                     }}>Frontend Developer  NextJs, React, JavaScript, GraphQL</Typography>
                     <Typography paragraph>
-                        I am a software engineer with over nine years of experience on web development and seven years of experience in front-end development, specializing in React and JavaScript. 
-                        I am passionate about creating innovative, functional, attractive web solutions and deploy high-quality, high-performance Saas application. 
+                    I am a software engineer with over nine years of experience in web development specializing in React, JavaScript, NextJs and NodeJs. 
+                    I am passionate about creating innovative, functional, attractive web solutions to deploy high-quality and high-performance Saas applications.
                     </Typography>
                 </Grid>
                 <Grid md={6}>

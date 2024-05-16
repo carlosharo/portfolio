@@ -13,17 +13,15 @@ export default function RootLayout({
   const theme = useTheme();
   return (
     <html lang="en">
-       <body>
-            <CustomTheme>
-                <HeaderLayout />
-                <Container>
-                    <PTGridContainer>
-                        {children}
-                    </PTGridContainer>
-                </Container>
-                <FooterLayout />
-            </CustomTheme>
-        </body>
+      <body>
+        <CustomTheme>
+          <HeaderLayout />
+          <Container maxWidth='lg' sx={{ padding: { xs: '15px', md: '30px' } }}>
+            {children}
+          </Container>
+          <FooterLayout />
+        </CustomTheme>
+      </body>
     </html>
   );
 }

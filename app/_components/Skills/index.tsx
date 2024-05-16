@@ -11,9 +11,9 @@ interface PTSkillsProps {
 export const Skill = ({ name, icon }: PTSkillsProps) => {
     return (
         <PTCard>
-            <PTCardContent sx={{ width: '100px' }}>
+            <PTCardContent sx={{ width: { xs: 'auto', md: '100px' } }}>
                 {icon}
-                <Typography align='center'>{name}</Typography>
+                <Typography align='center' sx={{fontSize: {xs: 'small', md: 'medium'}}}>{name}</Typography>
             </PTCardContent>
         </PTCard>
     );
@@ -27,6 +27,7 @@ export const Skills = () => {
                     <Typography variant='h4' align="center">Main Skills</Typography>
                 </Grid>
                 <Stack
+
                     direction='row'
                     justifyContent='center'
                     spacing={{ xs: 1, md: 4 }}
