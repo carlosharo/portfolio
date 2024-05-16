@@ -1,6 +1,5 @@
 'use client'
-import { theme } from "@/app/theme";
-import { Stack, StackProps, styled } from "@mui/material";
+import { Stack, StackProps, styled, useTheme } from "@mui/material";
 import { ReactNode } from "react";
 
 interface PTContainerProps extends StackProps {
@@ -8,6 +7,7 @@ interface PTContainerProps extends StackProps {
 }
 
 export const PTStack = styled(({ children, ...props }: PTContainerProps) => {
+    const theme = useTheme();
     return <Stack
         direction='row'
         justifyContent='center'

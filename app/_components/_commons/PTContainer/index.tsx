@@ -1,5 +1,5 @@
 'use client'
-import { Container } from "@mui/material";
+import { Container, useTheme } from "@mui/material";
 import React, { ReactNode } from "react";
 
 interface PTcontainerProps {
@@ -7,12 +7,13 @@ interface PTcontainerProps {
 }
 
 export const PTContainer = ({ children }: PTcontainerProps) => {
+    const theme = useTheme();
     return <Container
         sx={{
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
-            backgroundColor: '#000',
+            backgroundColor: theme.palette.background.default,
             minHeight: '100vh',
         }}
     >

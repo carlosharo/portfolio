@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 import { Key } from "react";
 import Link from "next/link";
 
@@ -8,6 +8,7 @@ interface HeaderDesktopProps {
 }
 
 export const HeaderDesktop = ({ handleCloseNavMenu, layout }: HeaderDesktopProps) => {
+    const theme = useTheme();
     return (
         <><Typography
             variant="h6"
@@ -18,7 +19,6 @@ export const HeaderDesktop = ({ handleCloseNavMenu, layout }: HeaderDesktopProps
                 fontFamily: 'monospace',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
-                color: 'inherit',
                 textDecoration: 'none',
             }}
         >
@@ -27,21 +27,24 @@ export const HeaderDesktop = ({ handleCloseNavMenu, layout }: HeaderDesktopProps
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {layout.map((page) => (
                     <Button
+                        color="secondary"
                         key={page as Key}
                         onClick={handleCloseNavMenu}
-                        sx={{ 
-                            my: 2, 
+                        sx={{
+                            my: 2,
                             display: 'block',
-                            '&:hover':{
-                                borderBottom: `1px solid red`,
+                            '&:hover': {
+                                borderBottom: `1px solid ${theme.palette.primary.light}`,
                                 backgroundColor: 'unset',
                                 borderRadius: 0,
+                                color: `${theme.palette.primary.light}`
                             }
                         }}
                     >
                         <Link href={`/${page.toLowerCase()}`}>{page}</Link>
                     </Button>
                 ))}
-            </Box></>
+            </Box>
+        </>
     );
 }
