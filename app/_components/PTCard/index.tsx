@@ -18,6 +18,7 @@ export const PTCardContainer = ({ children, ...props }: PTCardProps & CardProps)
                 borderBottom: '1px solid transparent',
                 borderImage: `linear-gradient(0.25turn, rgba(0, 0, 0, 0), ${theme.palette.primary.light}, ${theme.palette.background.default})`,
                 borderImageSlice: 1,
+                my: { xs: 2, md: 4, lg: 6 },
             }}
             {...props}
         >

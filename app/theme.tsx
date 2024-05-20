@@ -1,5 +1,5 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
-import { blue, blueGrey, deepPurple, green, red } from "@mui/material/colors";
+import { blue, blueGrey, green, red } from "@mui/material/colors";
 import { ReactNode, createContext, useMemo, useState } from "react";
 
 interface CustomThemeProps {
