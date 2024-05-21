@@ -1,4 +1,6 @@
-import { JavaScript, NextJs, Reactjs, Typescript } from '../_icons';
+import { JavaScript, NextJs, Reactjs, Typescript, MateriaulUI } from '../_icons';
+import { GithubCopilot } from '../_icons/githubcopilot';
+import { NodeJs } from '../_icons/nodejs';
 
 export interface portfolioProps {
     personalInfo: {
@@ -20,6 +22,10 @@ export interface portfolioProps {
             title: string;
             options: string[];
         };
+        footer: {
+            title: string;
+            logos: JSX.Element[];
+        };
     };
 }
 
@@ -34,16 +40,27 @@ export const portfolio = {
         title: 'Main Skills',
         primary: [
             { name: 'Javascript', icon: <JavaScript />, progress: null },
-            { name: 'React', icon: <Reactjs />, progress: null },
+            { name: 'ReactJs', icon: <Reactjs />, progress: null },
             { name: '', icon: <NextJs />, progress: null },
             { name: 'Typescript', icon: <Typescript />, progress: null },
+            { name: 'NodeJs', icon: <NodeJs />, progress: null },
         ]
     },
     layout: {
         menu: {
             title: 'Portfolio',
             options: ["Tools", "Algorithms", "Articles", "Review"],
+        },
+        footer: {
+            title: 'Developed with',
+            logos: [
+                <NextJs key='nextjs' />,
+                <JavaScript key='javascript' />,
+                <Reactjs key='reactjs' />,
+                <MateriaulUI key='materialui' />,
+                <Typescript key='typescript' />,
+                <GithubCopilot key='githubcopilot' />,
+            ],
         }
     }
-
 }

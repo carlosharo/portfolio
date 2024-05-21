@@ -1,6 +1,5 @@
 'use client'
 import { useContext, useState } from "react";
-import { layout } from '../../_commons/_mocks';
 import { HeaderMobile } from "./Components/HeaderMobile";
 import { HeaderDesktop } from "./Components/HeaderDesktop";
 import { PTAppBar } from "@/app/_components";
