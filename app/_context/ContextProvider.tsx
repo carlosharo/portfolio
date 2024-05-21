@@ -1,16 +1,16 @@
 'use client'
 import React, { createContext, useState } from 'react';
-import { portfolioProps } from '../_commons/_mocks';
 import { portfolio } from '../_commons/_mocks';
+import { PortfolioProps } from '../_commons/_types';
 
 interface ContextProviderProps {
     children: React.ReactNode;
 }
 
-export const PortfolioContext = createContext<portfolioProps>(portfolio);
+export const PortfolioContext = createContext<PortfolioProps>(portfolio);
 
 export const ContextProvider = ({ children }: ContextProviderProps) => {
-    const [state, setState] = useState<portfolioProps>(portfolio);
+    const [state, setState] = useState<PortfolioProps>(portfolio);
 
     return (
         <PortfolioContext.Provider value={state}>

@@ -8,7 +8,7 @@ export const FooterLayout = () => {
     const portfolio = useContext(PortfolioContext);
     const { layout: { footer: { title, logos } } } = portfolio;
     return <PTStack>
-        <Box alignContent={'center'}><Typography>{title}</Typography></Box>
+        <Box alignContent={'center'}><Typography sx={{fontSize:{xs:'x-small', sm:'small'}}}>{title}</Typography></Box>
                 {logos.map((logo, i) => <PTPaper
                     sx={{
                         height: { xs: 50, md: 75 },

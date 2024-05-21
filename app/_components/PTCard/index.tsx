@@ -29,7 +29,7 @@ export const PTCard = styled(({ children, ...props }: PTCardProps & CardProps) =
     return (
         <Card
             sx={{
-                minHeight: 120,
+                minHeight: { xs: '100%', md: '100px' },
                 alignContent: 'center',
                 justifyContent: 'center',
                 bgcolor: 'transparent',

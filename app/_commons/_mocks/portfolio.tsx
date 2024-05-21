@@ -1,50 +1,33 @@
-import { JavaScript, NextJs, Reactjs, Typescript, MateriaulUI } from '../_icons';
-import { GithubCopilot } from '../_icons/githubcopilot';
-import { NodeJs } from '../_icons/nodejs';
-
-export interface portfolioProps {
-    personalInfo: {
-        intro: string;
-        name: string;
-        teach: string;
-        description: string;
-    };
-    skills: {
-        title: string;
-        primary: {
-            name: string;
-            icon: JSX.Element;
-            progress: null;
-        }[];
-    };
-    layout: {
-        menu: {
-            title: string;
-            options: string[];
-        };
-        footer: {
-            title: string;
-            logos: JSX.Element[];
-        };
-    };
-}
+import { JavaScript, NextJs, Reactjs, Typescript, MateriaulUI, NodeJs, Redux, GithubCopilot, Html5, Css3, Graphql } from '../_icons';
 
 export const portfolio = {
     personalInfo: {
         intro: 'I am',
         name: 'Carlos Haro',
-        teach: 'Frontend Developer, Next.js, ReactJs, Typescript, Javascript, Graphql, NodeJs',
+        teach: 'Software Engineer, Next.js, ReactJs, Typescript, Javascript, GraphQL, NodeJs',
         description: 'I am a software engineer with over nine years of experience in web development specializing in React, JavaScript, NextJs and NodeJs. I am passionate about creating innovative, functional, attractive web solutions to deploy high-quality and high-performance Saas applications.'
     },
     skills: {
-        title: 'Main Skills',
-        primary: [
-            { name: 'Javascript', icon: <JavaScript />, progress: null },
-            { name: 'ReactJs', icon: <Reactjs />, progress: null },
-            { name: '', icon: <NextJs />, progress: null },
-            { name: 'Typescript', icon: <Typescript />, progress: null },
-            { name: 'NodeJs', icon: <NodeJs />, progress: null },
-        ]
+        primary: {
+            title: 'Main Skills',
+            values: [
+                { name: 'Javascript', icon: <JavaScript />, progress: null },
+                { name: 'ReactJs', icon: <Reactjs />, progress: null },
+                { name: '', icon: <NextJs />, progress: null },
+                { name: 'Typescript', icon: <Typescript />, progress: null },
+                { name: 'NodeJs', icon: <NodeJs />, progress: null },
+                { name: 'GraphQL', icon: <Graphql />, progress: null },
+            ]
+        },
+        secondary: {
+            title: 'Secondary Skills',
+            values: [
+                { name: 'Redux', icon: <Redux />, progress: null },
+                { name: '', icon: <Html5 />, progress: null },
+                { name: '', icon: <Css3 />, progress: null },
+            ]
+        }
+       
     },
     layout: {
         menu: {

@@ -1,41 +1,33 @@
 'use client'
 import { Grid, Stack, Typography } from "@mui/material";
 import { PTCard, PTCardContainer, PTCardContent, PTGridContainer } from "..";
-import { ReactNode, useContext } from "react";
-import { PortfolioContext } from "@/app/_context/ContextProvider";
+import { BaseSkillsProps, SkillProps, SkillsProps } from "@/app/_commons/_types";
 
-interface PTSkillsProps {
-    name: string;
-    icon?: ReactNode;
-}
-
-export const Skill = ({ name, icon }: PTSkillsProps) => {
+export const Skill = ({ name, icon }: SkillProps) => {
     return (
         <PTCard>
-            <PTCardContent sx={{ width: { xs: 'auto', md: '100px' } }}>
+            <PTCardContent sx={{ width: { xs: 'auto', md: '100px' }, padding: { xs: '5px', sm: '10px', md: '15px' } }}>
                 {icon}
-                <Typography align='center' sx={{ fontSize: { xs: 'small', md: 'medium' } }}>{name}</Typography>
+                <Typography align='center' sx={{ fontSize: { xs: 'x-small', sm: 'small', md: 'medium' } }}>{name}</Typography>
             </PTCardContent>
         </PTCard>
     );
 }
 
-export const Skills = () => {
-    const portfolio = useContext(PortfolioContext);
-    const { skills: { title, primary } } = portfolio;
+export const Skills = ({ title, values }: BaseSkillsProps) => {
     return (
         <PTCardContainer>
             <PTGridContainer>
                 <Grid xs={12}>
-                    <Typography variant='h4' align="center">{ title }</Typography>
+                    <Typography variant='h5' align="center">{title}</Typography>
                 </Grid>
                 <Stack
 
                     direction='row'
                     justifyContent='center'
-                    spacing={{ xs: 1, md: 4 }}
+                    spacing={{ xs: 0.2, sm: 2, md: 4 }}
                 >
-                    {primary.map((skill, i) => <Skill key={i} {...skill} />)}
+                    {values.map((skill, i) => <Skill key={i} {...skill} />)}
                 </Stack>
             </PTGridContainer>
         </PTCardContainer>
