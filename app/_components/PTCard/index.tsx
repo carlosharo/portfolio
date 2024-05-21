@@ -15,9 +15,7 @@ export const PTCardContainer = ({ children, ...props }: PTCardProps & CardProps)
                 color: theme.palette.text.primary,
                 background: `linear-gradient(to right bottom, ${theme.palette.primary.dark}, ${theme.palette.background.default})`,
                 borderRadius: '25px',
-                borderBottom: '1px solid transparent',
-                borderImage: `linear-gradient(0.25turn, rgba(0, 0, 0, 0), ${theme.palette.primary.light}, ${theme.palette.background.default})`,
-                borderImageSlice: 1,
+                my: { xs: 2, md: 4, lg: 6 },
             }}
             {...props}
         >
@@ -31,7 +29,7 @@ export const PTCard = styled(({ children, ...props }: PTCardProps & CardProps) =
     return (
         <Card
             sx={{
-                minHeight: 120,
+                minHeight: { xs: '100%', md: '100px' },
                 alignContent: 'center',
                 justifyContent: 'center',
                 bgcolor: 'transparent',

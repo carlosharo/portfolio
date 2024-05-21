@@ -69,7 +69,7 @@ export const CountdownRedux = () => {
                     <Typography sx={{ typography: { xs: 'h3', md: 'h2' } }}>
                         {isRunning ? getFormat(currentMinutes, currentSeconds) : 'TIME IS UP'}
                     </Typography>
-                    <Button variant="contained" fullWidth onClick={handleStart}>
+                    <Button variant="contained" color="primary" fullWidth onClick={handleStart}>
                         {buttonText}
                     </Button>
                 </PTCardContent>

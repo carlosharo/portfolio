@@ -1,18 +1,19 @@
-import { Box, IconButton, Menu, MenuItem, MenuList, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import { Key } from "react";
+import { Key, useContext } from "react";
 import Link from "next/link";
 import { PTMenu, PTMenuItem } from "@/app/_components";
-
+import { PortfolioContext } from "@/app/_context/ContextProvider";
 
 interface HeaderMobileProps {
     handleOpenNavMenu: (event: React.MouseEvent<HTMLElement>) => void;
     handleCloseNavMenu: () => void;
     anchorElNav: HTMLElement | null;
-    layout: string[];
 }
 
-export const HeaderMobile = ({ handleOpenNavMenu, handleCloseNavMenu, anchorElNav, layout }: HeaderMobileProps) => {
+export const HeaderMobile = ({ handleOpenNavMenu, handleCloseNavMenu, anchorElNav }: HeaderMobileProps) => {
+    const portfolio = useContext(PortfolioContext);
+    const { layout: { menu: { title, options } } } = portfolio;
     return (
         <><Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -31,7 +32,7 @@ export const HeaderMobile = ({ handleOpenNavMenu, handleCloseNavMenu, anchorElNa
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
             >
-                    {layout.map((page) => (
+                    {options.map((page) => (
                         <PTMenuItem key={page as Key} onClick={handleCloseNavMenu}>
                             <Typography textAlign="center">
                                 <Link href={`/${page.toLowerCase()}`}>{page}</Link>
@@ -53,7 +54,7 @@ export const HeaderMobile = ({ handleOpenNavMenu, handleCloseNavMenu, anchorElNa
                 textDecoration: 'none',
             }}
         >
-                <Link href='/'>PORTFOLIO</Link>
+                <Link href='/'>{title}</Link>
             </Typography></>
     );
 }
