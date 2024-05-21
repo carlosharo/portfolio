@@ -1,14 +1,16 @@
 import { Box, Button, Typography, useTheme } from "@mui/material";
-import { Key } from "react";
+import { Key, useContext } from "react";
 import Link from "next/link";
+import { PortfolioContext } from "@/app/_context/ContextProvider";
 
 interface HeaderDesktopProps {
     handleCloseNavMenu: () => void;
-    layout: string[];
 }
 
-export const HeaderDesktop = ({ handleCloseNavMenu, layout }: HeaderDesktopProps) => {
+export const HeaderDesktop = ({ handleCloseNavMenu }: HeaderDesktopProps) => {
     const theme = useTheme();
+    const portfolio = useContext(PortfolioContext);
+    const { layout: { menu: { title, options } } } = portfolio;
     return (
         <><Typography
             variant="h6"
@@ -22,10 +24,10 @@ export const HeaderDesktop = ({ handleCloseNavMenu, layout }: HeaderDesktopProps
                 textDecoration: 'none',
             }}
         >
-            <Link href='/'>PORTFOLIO</Link>
+            <Link href='/'>{title}</Link>
         </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                {layout.map((page) => (
+                {options.map((page) => (
                     <Button
                         color="secondary"
                         key={page as Key}

@@ -11,9 +11,15 @@ export interface portfolioProps {
         title: string;
         primary: {
             name: string;
-            icon: any;
-            progress: any;
+            icon: JSX.Element;
+            progress: null;
         }[];
+    };
+    layout: {
+        menu: {
+            title: string;
+            options: string[];
+        };
     };
 }
 
@@ -28,10 +34,16 @@ export const portfolio = {
         title: 'Main Skills',
         primary: [
             { name: 'Javascript', icon: <JavaScript />, progress: null },
-            { name: 'React', icon:<Reactjs/>, progress: null },
+            { name: 'React', icon: <Reactjs />, progress: null },
             { name: '', icon: <NextJs />, progress: null },
             { name: 'Typescript', icon: <Typescript />, progress: null },
         ]
     },
-   
+    layout: {
+        menu: {
+            title: 'Portfolio',
+            options: ["Tools", "Algorithms", "Articles", "Review"],
+        }
+    }
+
 }

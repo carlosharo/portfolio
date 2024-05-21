@@ -24,8 +24,8 @@ export const HeaderLayout = () => {
         <PTAppBar>
             <Container maxWidth='lg'>
                 <Toolbar disableGutters>
-                    <HeaderDesktop {...{ handleCloseNavMenu, layout }} />
-                    <HeaderMobile {...{ handleOpenNavMenu, handleCloseNavMenu, anchorElNav, layout }} />
+                    <HeaderDesktop {...{ handleCloseNavMenu }} />
+                    <HeaderMobile {...{ handleOpenNavMenu, handleCloseNavMenu, anchorElNav }} />
                     <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
                         {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
                     </IconButton>
