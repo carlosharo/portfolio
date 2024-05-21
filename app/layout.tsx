@@ -17,8 +17,7 @@ export default function RootLayout({
         <CustomTheme>
           <ContextProvider>
           <HeaderLayout />
-          <Container maxWidth='lg' sx={{
-            padding: { xs: '15px', md: '30px' },
+          <Container sx={{
             minHeight: '100vh',
           }}>
             {children}

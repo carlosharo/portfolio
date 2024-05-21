@@ -1,4 +1,7 @@
-import { JavaScript, NextJs, Reactjs, Typescript, MateriaulUI, NodeJs, Redux, GithubCopilot, Html5, Css3, Graphql } from '../_icons';
+import { icons } from '../_icons';
+import { Mysql } from '../_icons/mysql';
+
+const { JavaScript, NextJs, Reactjs, Typescript, MateriaulUI, NodeJs, Redux, GithubCopilot, Html5, Css3, Graphql, Git } = icons;
 
 export const portfolio = {
     personalInfo: {
@@ -24,7 +27,9 @@ export const portfolio = {
             values: [
                 { name: 'Redux', icon: <Redux />, progress: null },
                 { name: '', icon: <Html5 />, progress: null },
-                { name: '', icon: <Css3 />, progress: null },
+                { name: 'Css', icon: <Css3 />, progress: null },
+                { name: 'Git/GitHub', icon: <Git />, progress: null },
+                { name: '', icon: <Mysql />, progress: null },
             ]
         }
        

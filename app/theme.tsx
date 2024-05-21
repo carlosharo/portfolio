@@ -9,7 +9,7 @@ interface CustomThemeProps {
 const darkTheme = {
   primary: {
     main: lightBlue[900],
-    dark: '#191f21',
+    dark: '#17272f',
     light: red['A700'],
     contrastText: blueGrey[100],
   },
