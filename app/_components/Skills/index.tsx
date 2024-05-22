@@ -23,7 +23,7 @@ export const Skill = ({ name, icon }: SkillProps) => {
     );
 }
 
-export const Skills = ({ title, values }: BaseSkillsProps) => {
+export const Skills = ({ title, tags }: BaseSkillsProps) => {
     const theme = useTheme();
     return (
         <PTCardContainer sx={{background: theme.palette.background.paper}}>
@@ -37,7 +37,7 @@ export const Skills = ({ title, values }: BaseSkillsProps) => {
                     justifyContent='center'
                     spacing={{ xs: 0.2, sm: 2, md: 4 }}
                 >
-                    {values.map((skill, i) => <Skill key={i} {...skill} />)}
+                    {tags.map((tag, i) => <Skill key={i} {...tag} />)}
                 </Stack>
             </PTGridContainer>
         </PTCardContainer>

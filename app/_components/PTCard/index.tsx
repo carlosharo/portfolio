@@ -1,5 +1,5 @@
 'use client'
-import { Card, CardContent, CardContentProps, CardProps, styled, useTheme } from "@mui/material";
+import { Card, CardContent, CardContentProps, CardProps, alpha, styled, useTheme } from "@mui/material";
 import { ReactNode } from "react";
 
 interface PTCardProps {
@@ -12,10 +12,7 @@ export const PTCardContainer = ({ children, ...props }: PTCardProps & CardProps)
         <Card
             sx={{
                 minWidth: { xs: '100%' },
-                background: 'transparent',
-                '&:hover': {
-                    background: `linear-gradient(135deg, ${theme.palette.primary.dark}, transparent)`,
-                },
+                background: `linear-gradient(145deg, ${alpha(theme.palette.primary.dark, 0.3)}, transparent)`,
                 boxShadow: 'unset',
                 borderRadius: '35px',
                 my: { xs: 2, md: 4, lg: 6 },

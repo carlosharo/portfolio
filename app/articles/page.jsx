@@ -1,8 +1,10 @@
+import { Container } from '@mui/material';
 import { UnderConstrucction } from '../_components/_commons/_TempUnderConstruction';
 
-export default function About() {
-
+export default function Articles() {
     return (
-        <UnderConstrucction />
+        <Container sx={{ minHeight: '100vh' }}>
+            <UnderConstrucction />
+        </Container>
     );
 }

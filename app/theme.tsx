@@ -8,8 +8,8 @@ interface CustomThemeProps {
 
 const darkTheme = {
   primary: {
-    main: lightBlue[900],
-    dark: blueGrey[900],
+    main: lightBlue[800],
+    dark: lightBlue[900],
     light: lightBlue['A700'],
     contrastText: lightBlue['A100'],
   },
@@ -31,7 +31,7 @@ const darkTheme = {
 const lightTheme = {
   primary: {
     main: blue[800],
-    dark: '#dfdfdf',
+    dark: blue[900],
     light: green['A700'],
     contrastText: blue[100],
   },
