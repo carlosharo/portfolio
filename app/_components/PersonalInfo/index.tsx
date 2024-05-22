@@ -16,7 +16,7 @@ export const PersonalInfo = () => {
                 <Grid md={6} item>
                     <Typography variant='h4'>{`${intro} ${name}`}</Typography>
                     <Typography variant='h3' sx={{
-                        backgroundImage: `linear-gradient(90deg, ${theme.palette.secondary.light}, ${theme.palette.primary.contrastText})`,
+                        backgroundImage: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.primary.light})`,
                         backgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                     }}>{teach}</Typography>

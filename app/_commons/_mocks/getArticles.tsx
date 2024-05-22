@@ -1,11 +1,3 @@
-interface Articles {
-  createdAt: string;
-  name: string;
-  avatar: string;
-  comments: string;
-  id: string;
-}
-
 export default async function getArticles() {
   const options = {
     next: { revalidate: 3600, tags: ['articles'] }

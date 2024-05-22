@@ -43,4 +43,5 @@ export interface PortfolioProps {
     skills: SkillsProps;
     layout: LayoutProps;
     habilities: HabilityProps[];
+    secHabilities: HabilityProps[];
 }

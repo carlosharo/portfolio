@@ -29,12 +29,12 @@ export const HeaderDesktop = ({ handleCloseNavMenu }: HeaderDesktopProps) => {
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {options.map((page) => (
                     <Button
-                        color="secondary"
                         key={page as Key}
                         onClick={handleCloseNavMenu}
                         sx={{
                             my: 2,
                             display: 'block',
+                            color: theme.palette.primary.contrastText,
                             '&:hover': {
                                 borderBottom: `1px solid ${theme.palette.primary.light}`,
                                 backgroundColor: 'unset',

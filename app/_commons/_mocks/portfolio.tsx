@@ -32,7 +32,6 @@ export const portfolio = {
                 { name: '', icon: <Mysql />, progress: null },
             ]
         }
-
     },
     habilities: [
         {
@@ -64,6 +63,46 @@ export const portfolio = {
                 'Enzyme',
                 'ReactJs',
                 'Javascript',
+            ],
+        },
+        {
+            title: 'Hability',
+            description: 'Troubleshooting and maintaining React components to ensure fast, optimal performance for data visualization and interaction.',
+            values: [
+                'ReactJs',
+                'Javascript',
+                'CSS3',
+                'HTML5',
+                'Redux',
+            ],
+        },
+    ],
+    secHabilities: [
+        {
+            title: 'Hability',
+            description: 'Handling relational database operations to create, store, and retrieve data..',
+            values: [
+                'Javascript',
+                'Nodejs',
+                'Mysql',
+            ],
+        },
+        {
+            title: 'Hability',
+            description: 'Proficient in developing and updating services using Node.js.',
+            values: [
+                'NodeJs',
+                'Javascript',
+                'Postman',
+            ],
+        },
+        {
+            title: 'Hability',
+            description: 'Hands-on experience in continuous integration using Git and GitHub to deliver high-quality software.',
+            values: [
+                'Git',
+                'Github',
+                'CI/CD',
             ],
         },
     ],

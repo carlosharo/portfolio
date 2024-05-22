@@ -8,7 +8,7 @@ import Habilities from './_components/Habilities';
 
 export default function Home() {
   const portfolio = useContext(PortfolioContext);
-  const { skills: { primary, secondary }, habilities } = portfolio;
+  const { skills: { primary, secondary }, habilities, secHabilities } = portfolio;
 
   return (
     <>
@@ -16,7 +16,7 @@ export default function Home() {
       <Skills {...primary} />
       <Habilities {...{ habilities }} />
       <Skills {...secondary} />
-      <Habilities {...{ habilities }} />
+      <Habilities habilities={secHabilities} />
     </>
   );
 }

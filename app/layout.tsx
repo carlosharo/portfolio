@@ -2,7 +2,7 @@
 import "./globals.css";
 import { FooterLayout, HeaderLayout } from "./_layout";
 import { CustomTheme } from "./theme";
-import { Container, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 import { ContextProvider } from "./_context/ContextProvider";
 
 export default function RootLayout({

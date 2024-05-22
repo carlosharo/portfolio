@@ -9,16 +9,16 @@ interface CustomThemeProps {
 const darkTheme = {
   primary: {
     main: lightBlue[900],
-    dark: '#2e2e2e',
-    light: red['A700'],
-    contrastText: blueGrey[100],
+    dark: blueGrey[900],
+    light: lightBlue['A700'],
+    contrastText: lightBlue['A100'],
   },
   secondary: {
     main: green[700],
     dark: green[800],
     light: green[400],
     contrastText: green['A700'],
-  },
+  },  
   background: {
     default: '#000',
     paper: '#1e1e1e',
@@ -33,7 +33,7 @@ const lightTheme = {
     main: blue[800],
     dark: '#dfdfdf',
     light: green['A700'],
-    contrastText: blueGrey[900],
+    contrastText: blue[100],
   },
   secondary: {
     main: '#fff',
