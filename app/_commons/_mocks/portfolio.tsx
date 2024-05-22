@@ -1,4 +1,7 @@
-import { JavaScript, NextJs, Reactjs, Typescript, MateriaulUI, NodeJs, Redux, GithubCopilot, Html5, Css3, Graphql } from '../_icons';
+import { icons } from '../_icons';
+import { Mysql } from '../_icons/mysql';
+
+const { JavaScript, NextJs, Reactjs, Typescript, MateriaulUI, NodeJs, Redux, GithubCopilot, Html5, Css3, Graphql, Git } = icons;
 
 export const portfolio = {
     personalInfo: {
@@ -24,11 +27,85 @@ export const portfolio = {
             values: [
                 { name: 'Redux', icon: <Redux />, progress: null },
                 { name: '', icon: <Html5 />, progress: null },
-                { name: '', icon: <Css3 />, progress: null },
+                { name: 'Css', icon: <Css3 />, progress: null },
+                { name: 'Git/GitHub', icon: <Git />, progress: null },
+                { name: '', icon: <Mysql />, progress: null },
             ]
         }
-       
     },
+    habilities: [
+        {
+            title: 'Hability',
+            description: 'Proficient in translating UI/UX designs from Figma into interactive and responsive user interfaces.',
+            values: [
+                'Figma',
+                'HTML5',
+                'CSS3',
+                'ReactJs',
+                'Typescript',
+            ],
+        },
+        {
+            title: 'Hability',
+            description: 'Experience working with GraphQL queries and Apollo to connect and manage data state to create React components with TypeScript.',
+            values: [
+                'ReactJs',
+                'GraphQL',
+                'Typescript',
+                'Apollo',
+            ],
+        },
+        {
+            title: 'Hability',
+            description: 'Ensure code quality by adding unit tests with Jest and Enzyme, achieving over 80% code coverage.',
+            values: [
+                'Jest',
+                'Enzyme',
+                'ReactJs',
+                'Javascript',
+            ],
+        },
+        {
+            title: 'Hability',
+            description: 'Troubleshooting and maintaining React components to ensure fast, optimal performance for data visualization and interaction.',
+            values: [
+                'ReactJs',
+                'Javascript',
+                'CSS3',
+                'HTML5',
+                'Redux',
+            ],
+        },
+    ],
+    secHabilities: [
+        {
+            title: 'Hability',
+            description: 'Handling relational database operations to create, store, and retrieve data..',
+            values: [
+                'Javascript',
+                'Nodejs',
+                'Mysql',
+            ],
+        },
+        {
+            title: 'Hability',
+            description: 'Proficient in developing and updating services using Node.js.',
+            values: [
+                'NodeJs',
+                'Javascript',
+                'Postman',
+            ],
+        },
+        {
+            title: 'Hability',
+            description: 'Hands-on experience in continuous integration using Git and GitHub to deliver high-quality software.',
+            values: [
+                'Git',
+                'Github',
+                'CI/CD',
+            ],
+        },
+    ],
     layout: {
         menu: {
             title: 'Portfolio',

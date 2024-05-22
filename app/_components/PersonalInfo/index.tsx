@@ -1,5 +1,5 @@
 'use client'
-import { Grid, Typography, useTheme } from "@mui/material";
+import { Container, Grid, Typography, useTheme } from "@mui/material";
 import { PTCardContainer, PTGridContainer, PTImage } from "..";
 import { useContext } from "react";
 import { PortfolioContext } from "@/app/_context/ContextProvider";
@@ -10,12 +10,13 @@ export const PersonalInfo = () => {
     const portfolio = useContext(PortfolioContext);
     const { intro, name, teach, description } = portfolio?.personalInfo;
     return (
+        <Container>
         <PTCardContainer >
             <PTGridContainer>
                 <Grid md={6} item>
                     <Typography variant='h4'>{`${intro} ${name}`}</Typography>
                     <Typography variant='h3' sx={{
-                        backgroundImage: `linear-gradient(90deg, ${theme.palette.secondary.light}, ${theme.palette.primary.contrastText})`,
+                        backgroundImage: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.primary.light})`,
                         backgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                     }}>{teach}</Typography>
@@ -28,5 +29,6 @@ export const PersonalInfo = () => {
                 </Grid>
             </PTGridContainer>
         </PTCardContainer>
+        </Container>
     );
 }

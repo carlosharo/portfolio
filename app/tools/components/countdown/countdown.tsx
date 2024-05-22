@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { getTime, getFormat } from '../../../_utils';
-import { SettingsIcon } from '../../../_commons/_icons';
+import { icons } from '../../../_commons/_icons';
 
 export const Countdown = () => {
     const [counter, setCounter] = useState<number>(0);
@@ -9,6 +9,7 @@ export const Countdown = () => {
     const [minutes, setMinutes] = useState<number>(45);
     const [showControls, setShowControls] = useState<boolean>(false);
     const { minutes: currentMinutes, seconds: currentSeconds, isRunning } = getTime(counter);
+    const { SettingsIcon } = icons;
 
     const handleStart = (
         e: { preventDefault: () => void; }

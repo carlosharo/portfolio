@@ -10,7 +10,7 @@ interface ContextProviderProps {
 export const PortfolioContext = createContext<PortfolioProps>(portfolio);
 
 export const ContextProvider = ({ children }: ContextProviderProps) => {
-    const [state, setState] = useState<PortfolioProps>(portfolio);
+    const [state] = useState<PortfolioProps>(portfolio);
 
     return (
         <PortfolioContext.Provider value={state}>

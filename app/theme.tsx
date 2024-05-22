@@ -9,22 +9,22 @@ interface CustomThemeProps {
 const darkTheme = {
   primary: {
     main: lightBlue[900],
-    dark: '#191f21',
-    light: red['A700'],
-    contrastText: blueGrey[100],
+    dark: blueGrey[900],
+    light: lightBlue['A700'],
+    contrastText: lightBlue['A100'],
   },
   secondary: {
-    main: blueGrey[100],
-    dark: blue[900],
-    light: '#2196f3',
-    contrastText: blue[100],
-  },
+    main: green[700],
+    dark: green[800],
+    light: green[400],
+    contrastText: green['A700'],
+  },  
   background: {
     default: '#000',
-    paper: '#1b1b21',
+    paper: '#1e1e1e',
   },
   action: {
-    hover: '#260606'
+    hover: '#414141'
   },
 }
 
@@ -33,7 +33,7 @@ const lightTheme = {
     main: blue[800],
     dark: '#dfdfdf',
     light: green['A700'],
-    contrastText: blueGrey[900],
+    contrastText: blue[100],
   },
   secondary: {
     main: '#fff',
@@ -46,7 +46,7 @@ const lightTheme = {
     paper: blue[900],
   },
   action: {
-    hover: blueGrey[100]
+    hover: blue[800]
   }
 }
 

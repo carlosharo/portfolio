@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useReducer, useCallback } from "react";
 import { getTime, getFormat } from '../../../_utils';
-import { SettingsIcon } from '../../../_commons/_icons';
+import { icons } from '../../../_commons/_icons';
 import { ActionPayload, countdownReducer, CountdownType, initialState } from '../../../_reducers'
 import { Settings } from "./settings";
 import { Button, CardActions, CardHeader, Typography } from "@mui/material";
@@ -11,6 +11,7 @@ export const CountdownRedux = () => {
     const [state, dispatch] = useReducer(countdownReducer, initialState);
     const { counter, seconds, minutes, showSettings } = state;
     const { minutes: currentMinutes, seconds: currentSeconds, isRunning } = getTime(counter);
+    const { SettingsIcon } = icons;
 
     const handleStart = (
         e: { preventDefault: () => void; }
