@@ -17,11 +17,7 @@ export default function RootLayout({
         <CustomTheme>
           <ContextProvider>
           <HeaderLayout />
-          <Container sx={{
-            minHeight: '100vh',
-          }}>
             {children}
-          </Container>
           <FooterLayout />
           </ContextProvider>
         </CustomTheme>

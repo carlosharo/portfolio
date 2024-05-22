@@ -32,8 +32,41 @@ export const portfolio = {
                 { name: '', icon: <Mysql />, progress: null },
             ]
         }
-       
+
     },
+    habilities: [
+        {
+            title: 'Hability',
+            description: 'Proficient in translating UI/UX designs from Figma into interactive and responsive user interfaces.',
+            values: [
+                'Figma',
+                'HTML5',
+                'CSS3',
+                'ReactJs',
+                'Typescript',
+            ],
+        },
+        {
+            title: 'Hability',
+            description: 'Experience working with GraphQL queries and Apollo to connect and manage data state to create React components with TypeScript.',
+            values: [
+                'ReactJs',
+                'GraphQL',
+                'Typescript',
+                'Apollo',
+            ],
+        },
+        {
+            title: 'Hability',
+            description: 'Ensure code quality by adding unit tests with Jest and Enzyme, achieving over 80% code coverage.',
+            values: [
+                'Jest',
+                'Enzyme',
+                'ReactJs',
+                'Javascript',
+            ],
+        },
+    ],
     layout: {
         menu: {
             title: 'Portfolio',

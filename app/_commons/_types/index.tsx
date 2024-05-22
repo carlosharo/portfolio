@@ -17,8 +17,8 @@ export type BaseSkillsProps = {
 }
 
 export type SkillsProps = {
-   primary: BaseSkillsProps;
-   secondary: BaseSkillsProps;
+    primary: BaseSkillsProps;
+    secondary: BaseSkillsProps;
 }
 
 export type LayoutProps = {
@@ -32,8 +32,15 @@ export type LayoutProps = {
     };
 }
 
+export type HabilityProps = {
+    title: string;
+    description: string;
+    values: string[];
+}
+
 export interface PortfolioProps {
     personalInfo: PersonalInfoProps;
     skills: SkillsProps;
     layout: LayoutProps;
+    habilities: HabilityProps[];
 }
