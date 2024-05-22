@@ -13,7 +13,7 @@ export default function Algorithms() {
                 {/** Menu section goes here */}
             </Grid>
             <Grid item xs={10}>
-                <PTCardDetails />
+                {portfolio.algorithms.map((algorithm, i) => <PTCardDetails key={i} {...algorithm} />)}
             </Grid>
         </PTGridContainer>
     );

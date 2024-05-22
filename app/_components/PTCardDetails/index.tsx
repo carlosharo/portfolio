@@ -1,48 +1,50 @@
-import Link from "next/link";
 import { PTCard, PTCardContainer, PTCardContent, PTImage } from "..";
-import { Box, CardHeader, CardMedia, Typography } from "@mui/material";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { codeStyle } from "@/app/styles";
+import { Box, CardMedia, Grid, IconButton, Link, Stack, Typography } from "@mui/material";
+import { ExpandLess, ExpandMore } from '@mui/icons-material';
+import { AlgorithmsProps } from "@/app/_commons/_types";
+import { useState } from "react";
 
-export const PTCardDetails = () => {
+export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const { title, href, description, example, media } = algorithm;
+
+    const handleExpandClick = () => {
+        setIsExpanded(!isExpanded);
+    }
+
     return (
         <PTCardContainer>
-            <PTCard>
-                <Link href="https://leetcode.com/problems/remove-element/description">
-                    <CardHeader title="Leetcode - 27.Remove Element" />
-                </Link>
-                <PTCardContent sx={{ alignItems: 'flex-start' }}>
-                    <Typography paragraph>
-                        Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.
-                        The order of the elements may be changed.
-                        Then return the number of elements in nums which are not equal to val.
-                    </Typography>
-                    <Typography variant="subtitle1">Example:</Typography>
-                    <Typography variant="subtitle1" align="left">Input: nums = [3,2,2,3], val = 3</Typography>
-                    <Typography variant="subtitle1" align="left">Output: 2, nums = [2,2,_,_]</Typography>
-                    <Typography variant="subtitle1" align="left">Explanation: Your function should return k = 2, with the first two elements of nums being 2.</Typography>
-                    <Box component="pre" p={2} overflow="auto" bgcolor="background.paper">
-                        <SyntaxHighlighter language="javascript" style={codeStyle}>
-                            {`
-var removeElement = function(nums, val) {
-    let k = 0;
-    for(let x = 0; x < nums.length; x++){
-        if(nums[x] !== val) {
-            nums[k] = nums[x];
-            k ++;
-        }
-    }
-    return k;
-};
-                            `.trim()}
-                        </SyntaxHighlighter>
-                    </Box>
-                    <CardMedia>
-                        <PTImage src="./algorithms/leetcode/27.remove_elements.png" alt="Leetcode - 27.Remove Element"/>
-                    </CardMedia>
-
-                </PTCardContent>
+            <PTCard style={{ padding: '20px' }}>
+                <Stack direction='row' justifyContent='space-between'>
+                    <Link href={href} underline='none' color='secondary'>
+                        <Typography variant='subtitle1'>{title}</Typography>
+                    </Link>
+                    <IconButton onClick={handleExpandClick}>
+                        {isExpanded ? <ExpandLess /> : <ExpandMore />}
+                    </IconButton>
+                </Stack>
+                {isExpanded && (
+                    <PTCardContent>
+                        <Typography variant='subtitle2'>{description}</Typography>
+                        <Box bgcolor="background.paper" sx={{ minWidth: '100%', padding: '10px', marginTop: '10px' }} >
+                            <Typography variant='subtitle2'>{example.title}</Typography>
+                        </Box>
+                        <Box bgcolor="primary.dark" sx={{ minWidth: '100%', padding: '10px' }} >
+                            <Typography variant='body2' sx={{ whiteSpace: 'preserve-breaks' }}>{example.description}</Typography>
+                        </Box>
+                        <Grid container bgcolor='background.paper'>
+                            <Grid item xs={12} md={6} padding={2}>
+                                <Typography variant='body2' sx={{ whiteSpace: 'pre-wrap' }}>{example.code}</Typography>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <CardMedia>
+                                    <PTImage src={media.href} alt={media.alt} />
+                                </CardMedia>
+                            </Grid>
+                        </Grid>
+                    </PTCardContent>
+                )}
             </PTCard>
         </PTCardContainer>
-    );
+    )
 }
