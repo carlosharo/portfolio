@@ -1,3 +1,7 @@
+
+/**
+ * Represents the props for the PersonalInfo component.
+ */
 export type PersonalInfoProps = {
     intro: string;
     name: string;
@@ -5,22 +9,34 @@ export type PersonalInfoProps = {
     description: string;
 }
 
+/**
+ * Represents the props for the Skill component.
+ */
 export type SkillProps = {
     name: string;
     icon: JSX.Element;
     progress?: null;
 }
 
+/**
+ * Represents the props for the BaseSkills component.
+ */
 export type BaseSkillsProps = {
     title: string;
-    values: SkillProps[];
+    tags: SkillProps[];
 }
 
+/**
+ * Represents the props for the Skills component.
+ */
 export type SkillsProps = {
     primary: BaseSkillsProps;
     secondary: BaseSkillsProps;
 }
 
+/**
+ * Represents the props for the Layout component.
+ */
 export type LayoutProps = {
     menu: {
         title: string;
@@ -32,16 +48,48 @@ export type LayoutProps = {
     };
 }
 
+/**
+ * Represents the props for the Hability component.
+ */
 export type HabilityProps = {
     title: string;
     description: string;
-    values: string[];
+    tags: string[];
 }
 
+/**
+ * Represents the props for the Habilities component.
+ */
+export type HabilitiesProps = {
+    main: HabilityProps[];
+    secondary: HabilityProps[];
+}
+
+/**
+ * Represents the props for the Algorithms component.
+ */
+export type AlgorithmsProps = {
+    title: string;
+    href: string;
+    description: string;
+    example: {
+        title: string;
+        description: string;
+        code: string;
+    };
+    media: {
+        href: string;
+        alt: string;
+    };
+}
+
+/**
+ * Represents the props for the Portfolio component.
+ */
 export interface PortfolioProps {
     personalInfo: PersonalInfoProps;
     skills: SkillsProps;
     layout: LayoutProps;
-    habilities: HabilityProps[];
-    secHabilities: HabilityProps[];
+    habilities: HabilitiesProps;
+    algorithms: AlgorithmsProps[];
 }

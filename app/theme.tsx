@@ -1,5 +1,5 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
-import { blue, blueGrey, green, lightBlue, red } from "@mui/material/colors";
+import { blue, green, lightBlue } from "@mui/material/colors";
 import { ReactNode, createContext, useMemo, useState } from "react";
 
 interface CustomThemeProps {
@@ -8,8 +8,8 @@ interface CustomThemeProps {
 
 const darkTheme = {
   primary: {
-    main: lightBlue[900],
-    dark: blueGrey[900],
+    main: lightBlue[800],
+    dark: lightBlue[900],
     light: lightBlue['A700'],
     contrastText: lightBlue['A100'],
   },
@@ -31,7 +31,7 @@ const darkTheme = {
 const lightTheme = {
   primary: {
     main: blue[800],
-    dark: '#dfdfdf',
+    dark: blue[900],
     light: green['A700'],
     contrastText: blue[100],
   },
@@ -43,7 +43,7 @@ const lightTheme = {
   },
   background: {
     default: '#fff',
-    paper: blue[900],
+    paper: blue[800],
   },
   action: {
     hover: blue[800]

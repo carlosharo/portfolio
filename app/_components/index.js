@@ -10,3 +10,4 @@ export * from './PTMenu';
 export * from './PTCard';
 export * from './PTGridContainer';
 export * from './PTImage';
+export * from './PTCardDetails';
