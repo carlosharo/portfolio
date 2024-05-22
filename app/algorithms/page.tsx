@@ -10,7 +10,7 @@ export default function Algorithms() {
     return (
         <PTGridContainer sx={{ minHeight: '100vh' }}>
             <Grid item padding={2} xs={2}>
-                {/** Menu section goes here */}
+                {/** TODO: Menu section goes here */}
             </Grid>
             <Grid item xs={10}>
                 {portfolio.algorithms.map((algorithm, i) => <PTCardDetails key={i} {...algorithm} />)}
