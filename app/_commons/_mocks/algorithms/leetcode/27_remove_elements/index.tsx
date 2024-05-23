@@ -3,8 +3,8 @@ export const remove_elements = {
     title: 'Leetcode - 27.Remove Element',
     href: 'https://leetcode.com/problems/remove-element/description',
     description: `Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.
-    The order of the elements may be changed.
-    Then return the number of elements in nums which are not equal to val.`,
+The order of the elements may be changed.
+Then return the number of elements in nums which are not equal to val.`,
     example: {
         title: 'Example:',
         description: `Input: nums = [3,2,2,3], val = 3

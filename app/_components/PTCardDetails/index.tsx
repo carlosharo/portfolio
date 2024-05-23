@@ -5,7 +5,7 @@ import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import { AlgorithmsProps } from "@/app/_commons/_types";
 import { useState } from "react";
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { qtcreatorDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -14,7 +14,6 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
     const handleExpandClick = () => {
         setIsExpanded(!isExpanded);
     }
-    const codeString = `(num) => num + 1`;
 
     return (
         <PTCard style={{ padding: '20px' }}>
@@ -27,8 +26,10 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
                 </IconButton>
             </Stack>
             {isExpanded && (
-                <PTCardContent>
-                    <Typography variant='subtitle2'>{description}</Typography>
+                <PTCardContent >
+                    <Box bgcolor="background.default" sx={{ minWidth: '100%', padding: '10px', marginTop: '10px' }} >
+                        <Typography variant='subtitle2' sx={{ whiteSpace: 'preserve-breaks' }}>{description}</Typography>
+                    </Box>
                     <Box bgcolor="background.default" sx={{ minWidth: '100%', padding: '10px', marginTop: '10px' }} >
                         <Typography variant='subtitle2'>{example.title}</Typography>
                     </Box>
@@ -41,9 +42,9 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
                                 <SyntaxHighlighter
                                     language="javascript"
                                     showLineNumbers
-                                    style={nightOwl}
+                                    style={qtcreatorDark}
                                     codeTagProps={{ style: { color: '#bde2ff' } }}
-                                    >
+                                >
                                     {`${example.code}`}
                                 </SyntaxHighlighter>
                             </Typography>
