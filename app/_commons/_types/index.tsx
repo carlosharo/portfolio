@@ -75,7 +75,7 @@ export type AlgorithmsProps = {
     example: {
         title: string;
         description: string;
-        code: string;
+        code: (...props: any) => Array<any> | string | number | void;
     };
     media: {
         href: string;
