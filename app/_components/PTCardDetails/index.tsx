@@ -4,6 +4,8 @@ import { Box, CardMedia, Grid, IconButton, Link, Stack, Typography } from "@mui/
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import { AlgorithmsProps } from "@/app/_commons/_types";
 import { useState } from "react";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -12,6 +14,7 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
     const handleExpandClick = () => {
         setIsExpanded(!isExpanded);
     }
+    const codeString = `(num) => num + 1`;
 
     return (
         <PTCard style={{ padding: '20px' }}>
@@ -34,7 +37,16 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
                     </Box>
                     <Grid container bgcolor='background.default'>
                         <Grid item xs={12} md={6} padding={2}>
-                            <Typography variant='body2' sx={{ whiteSpace: 'pre-wrap' }}>{example.code}</Typography>
+                            <Typography variant='caption' sx={{ fontSize: { xs: '9px', sm: '10px', md: '12px' } }}>
+                                <SyntaxHighlighter
+                                    language="javascript"
+                                    showLineNumbers
+                                    style={nightOwl}
+                                    codeTagProps={{ style: { color: '#bde2ff' } }}
+                                    >
+                                    {`${example.code}`}
+                                </SyntaxHighlighter>
+                            </Typography>
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <CardMedia>
