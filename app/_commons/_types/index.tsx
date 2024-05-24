@@ -71,6 +71,7 @@ export type HabilitiesProps = {
 export type AlgorithmsProps = {
     title: string;
     href: string;
+    subtitle: string;
     description: string;
     example: {
         title: string;

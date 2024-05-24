@@ -7,8 +7,9 @@ import { PortfolioContext } from "../_context/ContextProvider";
 
 export default function Algorithms() {
     const portfolio = useContext(PortfolioContext);
+    
     return (
-        <PTGridContainer sx={{ minHeight: '100vh' }}>
+        <PTGridContainer sx={{ minHeight: '100vh',  }}>
             <Grid item padding={2} xs={2}>
                 {/** TODO: Menu section goes here */}
             </Grid>
