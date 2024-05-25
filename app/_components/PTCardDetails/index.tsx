@@ -6,8 +6,9 @@ import { AlgorithmsProps } from "@/app/_commons/_types";
 import { useState } from "react";
 import PrismAsyncLight from 'react-syntax-highlighter';
 import { qtcreatorDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import dynamic from "next/dynamic";
 
-export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
+const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const { title, subtitle, href, description, example, media } = algorithm;
 
@@ -60,4 +61,6 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
             )}
         </Box>
     )
-}
+};
+
+export default dynamic(() => Promise.resolve(PTCardDetails), { ssr: false });
