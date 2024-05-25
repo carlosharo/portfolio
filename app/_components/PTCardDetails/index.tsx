@@ -1,10 +1,10 @@
 'use client'
 import { PTCardContent, PTImage } from "..";
-import { Box, CardMedia, Grid, IconButton, Link, Stack, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Link, Stack, Typography } from "@mui/material";
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import { AlgorithmsProps } from "@/app/_commons/_types";
 import { useState } from "react";
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import PrismAsyncLight from 'react-syntax-highlighter';
 import { qtcreatorDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
@@ -42,14 +42,14 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
                     <Grid container bgcolor='background.default' justifyContent='center'>
                         <Grid item xs={12} md={6}>
                             <Typography variant='caption' sx={{ fontSize: { xs: '8px', sm: '10px', md: '12px' } }}>
-                                <SyntaxHighlighter
+                                <PrismAsyncLight
                                     language="javascript"
                                     showLineNumbers
                                     style={qtcreatorDark}
                                     codeTagProps={{ style: { color: '#bde2ff' } }}
                                 >
                                     {`${example.code}`}
-                                </SyntaxHighlighter>
+                                </PrismAsyncLight>
                             </Typography>
                         </Grid>
                         <Grid item xs={12} md={6} bgcolor='background.paper'>
