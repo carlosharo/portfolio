@@ -40,7 +40,7 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
                         <Typography variant='body2' sx={{ whiteSpace: 'preserve-breaks' }}>{example.description}</Typography>
                     </Box>
                     <Grid container bgcolor='background.default' justifyContent='center'>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} md={6}>
                             <Typography variant='caption' sx={{ fontSize: { xs: '8px', sm: '10px', md: '12px' } }}>
                                 <SyntaxHighlighter
                                     language="javascript"
@@ -52,9 +52,9 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
                                 </SyntaxHighlighter>
                             </Typography>
                         </Grid>
-                        <CardMedia >
+                        <Grid item xs={12} md={6} bgcolor='background.paper'>
                             <PTImage src={media.href} alt={media.alt} />
-                        </CardMedia>
+                        </Grid>
                     </Grid>
                 </PTCardContent>
             )}
