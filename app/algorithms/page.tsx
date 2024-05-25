@@ -1,10 +1,9 @@
 'use client'
 
 import { Grid } from "@mui/material";
-import { PTGridContainer } from "../_components";
+import { PTCardDetails, PTGridContainer } from "../_components";
 import { useContext } from "react";
 import { PortfolioContext } from "../_context/ContextProvider";
-import PTCardDetails from "../_components/PTCardDetails";
 
 export default function Algorithms() {
     const portfolio = useContext(PortfolioContext);

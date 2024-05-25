@@ -4,11 +4,15 @@ import { Box, Grid, IconButton, Link, Stack, Typography } from "@mui/material";
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import { AlgorithmsProps } from "@/app/_commons/_types";
 import { useState } from "react";
-import PrismAsyncLight from 'react-syntax-highlighter';
+import  SyntaxHighlighter  from 'react-syntax-highlighter';
 import { qtcreatorDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import dynamic from "next/dynamic";
 
-const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
+const Light = dynamic(() => import("react-syntax-highlighter"), {
+    ssr: false,
+  })
+
+export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const { title, subtitle, href, description, example, media } = algorithm;
 
@@ -43,14 +47,14 @@ const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
                     <Grid container bgcolor='background.default' justifyContent='center'>
                         <Grid item xs={12} md={6}>
                             <Typography variant='caption' sx={{ fontSize: { xs: '8px', sm: '10px', md: '12px' } }}>
-                                <PrismAsyncLight
+                                <Light 
                                     language="javascript"
                                     showLineNumbers
                                     style={qtcreatorDark}
                                     codeTagProps={{ style: { color: '#bde2ff' } }}
                                 >
                                     {`${example.code}`}
-                                </PrismAsyncLight>
+                                </Light>
                             </Typography>
                         </Grid>
                         <Grid item xs={12} md={6} bgcolor='background.paper'>
@@ -61,6 +65,4 @@ const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
             )}
         </Box>
     )
-};
-
-export default dynamic(() => Promise.resolve(PTCardDetails), { ssr: false });
+}
