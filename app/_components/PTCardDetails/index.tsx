@@ -4,6 +4,7 @@ import { Box, Grid, IconButton, Link, Stack, Typography } from "@mui/material";
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import { AlgorithmsProps } from "@/app/_commons/_types";
 import { useState } from "react";
+import { PTCodeFormat } from "../PTCodeFormat";
 
 export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -12,8 +13,6 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
     const handleExpandClick = () => {
         setIsExpanded(!isExpanded);
     }
-    console.log('#Log: code');
-    console.log(example.code);
 
     return (
         <Box bgcolor='background.paper' sx={{ padding: { md: '0 20px' }, margin: '10px 0', minHeight: '50px' }} >
@@ -41,7 +40,7 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
                     </Box>
                     <Grid container bgcolor='background.default' justifyContent='center'>
                         <Grid item xs={12} md={6} sx={{ whiteSpace: 'pre-wrap' }}>
-                            {`${example.code}`}
+                            <PTCodeFormat code={example.code.toString()} />
                         </Grid>
                         <Grid item xs={12} md={6} bgcolor='background.paper'>
                             <PTImage src={media.href} alt={media.alt} />
