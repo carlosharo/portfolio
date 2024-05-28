@@ -12,6 +12,8 @@ export const PTCardDetails: React.FC<AlgorithmsProps> = ({ ...algorithm }) => {
     const handleExpandClick = () => {
         setIsExpanded(!isExpanded);
     }
+    console.log('#Log: code');
+    console.log(example.code);
 
     return (
         <Box bgcolor='background.paper' sx={{ padding: { md: '0 20px' }, margin: '10px 0', minHeight: '50px' }} >
